@@ -1,414 +1,707 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dreamnity | Campaign Content Portal</title>
-
+<title>Dreamnity | Organic Virality Hub</title>
 <script src="https://cdn.tailwindcss.com"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-body{
-    font-family:'Inter',sans-serif;
-    background:#030712;
-    color:#f3f4f6;
-}
-
-.font-heading{
-    font-family:'Outfit',sans-serif;
-}
-
-.text-gradient{
-    background:linear-gradient(135deg,#38bdf8,#818cf8,#c084fc);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.reel-btn{
-    transition:all .25s ease;
-}
-
-.reel-btn.active{
-    background:#111827;
-    border-left:4px solid #6366f1;
-    color:#fff;
-}
-
-.reel-btn.inactive{
-    background:transparent;
-    border-left:4px solid transparent;
-    color:#9ca3af;
-}
-
-.reel-btn.inactive:hover{
-    background:#0f172a;
-    color:#fff;
-}
-
-.custom-scrollbar::-webkit-scrollbar{
-    width:6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track{
-    background:transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb{
-    background:#374151;
-    border-radius:999px;
-}
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #030712;
+        color: #f3f4f6;
+    }
+    h1, h2, h3, h4, h5, .font-heading {
+        font-family: 'Outfit', sans-serif;
+    }
+    .text-gradient {
+        background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .reel-btn {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reel-btn.active {
+        background-color: #111827;
+        border-left: 4px solid #6366f1;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        color: #ffffff;
+    }
+    .reel-btn.inactive {
+        background-color: transparent;
+        border-left: 4px solid transparent;
+        color: #9ca3af;
+    }
+    .reel-btn.inactive:hover {
+        background-color: #0f172a;
+        color: #f3f4f6;
+    }
+    .script-block {
+        animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #374151;
+        border-radius: 10px;
+    }
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
 </style>
 </head>
-
 <body class="antialiased pb-24 selection:bg-indigo-900 selection:text-indigo-200">
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+    
+    <header class="mb-12 border-b border-slate-900 pb-10 text-center md:text-left relative flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+            <div class="badge bg-indigo-950/50 text-indigo-400 border border-indigo-900/50 mb-4 font-heading tracking-widest">
+                THE SOLO-BUSINESS BLUEPRINT
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white">
+                Dreamnity <span class="text-gradient">Organic Assets</span>
+            </h1>
+            <p class="text-base text-slate-400 max-w-2xl leading-relaxed">
+                A hyper-curated set of standalone organic scripts. Cycle 1 establishes B2B compliance foundations. Cycle 2 leverages authentic, self-aware, and trend-focused scripts designed to establish absolute safety, transactional legitimacy, and trust.
+            </p>
+        </div>
+        <div class="flex items-center gap-3 bg-slate-900/40 border border-slate-800/80 px-5 py-3 rounded-2xl">
+            <div class="w-3.5 h-3.5 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Phase 1 Acquisition Ready</span>
+        </div>
+    </header>
 
-<header class="mb-12 border-b border-slate-900 pb-10 text-center md:text-left">
+    <!-- TIMELINE/CYCLE CONTROLLER -->
+    <div class="flex bg-slate-950 p-1.5 rounded-2xl border border-slate-900 max-w-lg mb-8">
+        <button onclick="switchCycle(1)" id="btn-cycle-1" class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md">
+            Cycle 1: B2B Foundations
+        </button>
+        <button onclick="switchCycle(2)" id="btn-cycle-2" class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all">
+            Cycle 2: Advanced Scaling
+        </button>
+    </div>
 
-<div class="inline-block px-3 py-1 rounded-full bg-indigo-950/50 text-indigo-400 border border-indigo-900/50 mb-4 font-bold text-xs uppercase tracking-widest">
-Audience Content Portal
-</div>
+    <!-- MAIN CREATIVE INTERFACE -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- SIDEBAR SELECTOR (COLUMN 1) -->
+        <div class="lg:col-span-1 flex flex-col gap-3 max-h-[680px] overflow-y-auto custom-scrollbar pr-2" id="reel-nav">
+            <!-- Navigation items programmatically generated here -->
+        </div>
 
-<h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white">
-<span class="text-gradient">Dreamnity</span> Strategic Assets
-</h1>
+        <!-- MAIN SCREENPLAY READER (COLUMN 2 & 3) -->
+        <div class="lg:col-span-2 bg-slate-950 rounded-3xl shadow-2xl border border-slate-900 p-6 md:p-10 min-h-[600px] relative overflow-hidden flex flex-col justify-between" id="script-content">
+            <!-- Active script content populated here -->
+        </div>
 
-<p class="text-base text-slate-400 max-w-2xl leading-relaxed">
-Content strategy for Phase 1. Cycle 1 builds compliance foundations, Cycle 2 accelerates scaling with high-engagement trends.
-</p>
-
-</header>
-
-<div class="flex bg-slate-950 p-1.5 rounded-2xl border border-slate-900 max-w-sm mb-8">
-
-<button
-onclick="switchCycle(1)"
-id="btn-cycle-1"
-class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all">
-Cycle 1
-</button>
-
-<button
-onclick="switchCycle(2)"
-id="btn-cycle-2"
-class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all">
-Cycle 2
-</button>
-
-</div>
-
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-<div
-id="reel-nav"
-class="lg:col-span-1 flex flex-col gap-3 max-h-[600px] overflow-y-auto custom-scrollbar pr-2">
-</div>
-
-<div
-id="script-content"
-class="lg:col-span-2 bg-gradient-to-br from-slate-950 to-slate-900 rounded-3xl border border-slate-800 p-8 min-h-[600px] shadow-2xl">
-</div>
-
-</div>
+    </div>
 
 </div>
 
 <script>
-let currentCycle = 1;
+    let currentCycle = 1;
 
-const reelsData = [
+    const reelsData = [
+        // --- CYCLE 1: B2B FOUNDATIONS ---
+        {
+            id: 1,
+            cycle: 1,
+            title: "Reel 1: The Vendor Onboarding Trap",
+            target: "Exposing the hidden friction of B2B client acquisition.",
+            vibe: "Highly engaging, slightly dramatic. Dropping a truth bomb.",
+            setup: "Actor sitting in a dimly lit, aesthetic room with a laptop glowing. Speaking intensely.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Getting a YES is only 10% of the battle.",
+                    audio: "Getting a corporate client to say 'YES' to your freelance pitch is only 10 percent of the battle.",
+                    visual: "Actor leans in. Eye contact is direct. Fast, snappy cut."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Narrative (A-Roll + B-Roll)",
+                    text: "The Accounts Payable Wall.",
+                    audio: "The other 90 percent is surviving their vendor onboarding. You celebrate the closed deal, but then their finance team sends you a massive vendor form asking for GST certificates, tax declarations, and compliance proofs.",
+                    visual: "Fast B-roll cuts: Scrolling through a dense 10-page corporate vendor registration PDF."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Agitation (A-Roll)",
+                    text: "Losing the contract.",
+                    audio: "If you can't provide enterprise-level tax documents, they will literally cancel the contract. Massive companies cannot pay unregistered individuals easily because it creates a compliance nightmare for their books.",
+                    visual: "Actor looks serious, pointing at the camera."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Borrow infrastructure.",
+                    audio: "You need to borrow enterprise infrastructure. We are building Dreamnity to solve exactly this. Link in bio to join the waitlist.",
+                    visual: "Actor maintains intense eye contact with a firm nod."
+                }
+            ]
+        },
+        {
+            id: 2,
+            cycle: 1,
+            title: "Reel 2: The Export Tax Delusion",
+            target: "Compliance Truths - Debunking the dangerous 'no tax' myth for international payments.",
+            vibe: "Highly informative, sarcastic, professional. Shocks the viewer out of dangerous habits.",
+            setup: "Actor sitting at a clean minimalist desk, looking over a government PDF document. Helpful but firm.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Tax evasion is not an aesthetic.",
+                    audio: "Avoiding the tax man because your client is located in New York is top-tier delusion. Let's talk about zero-rated export laws before you get an audit notice.",
+                    visual: "Actor taps their fingers on a compliance paper, looking directly into the camera."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Breakdown (A-Roll + B-Roll)",
+                    text: "The LUT Requirement.",
+                    audio: "A lot of Indian freelancers assume that because international work is an 'export of services' with zero GST, they don't have to report it. That is completely wrong. To legally claim that zero-percent tax status, you are required to file a Letter of Undertaking with the government every single year. Ignore this, and you are technically liable for a full eighteen percent GST.",
+                    visual: "B-Roll: Highlighting the direct 'GST RFD-11 LUT' section on the government GST portal interface."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Vision (A-Roll)",
+                    text: "The compliance bottleneck.",
+                    audio: "You cannot afford to play games with tax departments. You either need to keep a chartered accountant on retainer to manage LUT filings and monthly zero-returns, or run your payments through an infrastructure that does it for you.",
+                    visual: "Actor looks seriously at the camera, raising an eyebrow."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Automate your billing.",
+                    audio: "Stop taking massive compliance risks with your business. Join the early access waitlist for Dreamnity in our bio.",
+                    visual: "Actor nods confidently as the screen turns to slate."
+                }
+            ]
+        },
+        {
+            id: 3,
+            cycle: 1,
+            title: "Reel 3: The Canva Invoice Mistake",
+            target: "Invoice Rejection - Establishing authority by calling out a massive B2B amateur error.",
+            vibe: "Slightly brutal, highly practical, direct warning.",
+            setup: "Actor holding up their phone, looking at a beautiful but non-compliant design draft. Speaking with 'let's fix this' energy.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Pretty PDFs are trash.",
+                    audio: "Your pretty pastel Canva PDF with 'Invoice' typed in comic sans is not a real invoice. It is just a receipt. And corporate finance teams will reject it instantly.",
+                    visual: "Actor drags a mock document into a trash icon on their tablet screen."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "The Corporate AP Wall.",
+                    audio: "You spend weeks pitching an Indian client. They say yes, you send over your beautifully designed PDF, and... nothing. You get ghosted. It's not your work; it's their accounts payable team. Corporate finance operates on strict audit guidelines. If your invoice is missing SAC codes, precise GST breakdowns, and place of supply data, they legally cannot pay you.",
+                    visual: "B-Roll: Fast screen recording of a messy Canva template compared to a structured, legally compliant accounting layout."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "Enterprise billing standards.",
+                    audio: "Stop billing like a hobbyist if you want to charge like an agency. You need structured, automated invoice compliance that matches corporate standards instantly.",
+                    visual: "Actor folds their arms, presenting a confident, professional stance."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Bypass the Canva mess.",
+                    audio: "We built Dreamnity to generate completely compliant B2B tax invoices automatically. Link in bio to secure early access.",
+                    visual: "Clean product overlay of Dreamnity's pristine invoice dashboard."
+                }
+            ]
+        },
+        {
+            id: 4,
+            cycle: 1,
+            title: "Reel 4: The 18% Dead Cost",
+            target: "Approved Core - Re-optimized with the specific premium agency & invoice/receipt hook.",
+            vibe: "High agency, premium, analytical, eye-opening.",
+            setup: "Actor standing in a beautifully designed modern loft or minimalist studio. Confident, slow pacing.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "GST Invoice vs. Receipt.",
+                    audio: "If you want to charge premium agency rates, you have to send a legal GST invoice, not just a receipt without GST.",
+                    visual: "Actor looks directly into the lens. Snappy text overlays appear on either side."
+                },
+                {
+                    time: "0:08 - 0:25",
+                    type: "The Context Breath (A-Roll)",
+                    text: "Define the difference.",
+                    audio: "Let's take a quick breath and define this clearly. A PDF without a GST number isn't an invoice; legally, it's just a receipt. Corporate accounts teams absolutely hate receipts because they can't claim Input Tax Credit on them.",
+                    visual: "Text overlay splits screen cleanly: 'GST INVOICE (Tax Credit)' vs 'BASIC RECEIPT (No Tax Credit)'."
+                },
+                {
+                    time: "0:25 - 0:50",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "The 18% Penalty.",
+                    audio: "They operate purely on Input Tax Credit. If they pay a registered agency, they get that eighteen percent back from the government. If they pay you—an unregistered freelancer with a receipt—they can't claim a rupee. You become an eighteen percent dead cost on their books. You are literally costing them money.",
+                    visual: "B-Roll: Graphic illustrating the math: '₹1,00,000 payment + Unregistered Vendor = ₹18,000 lost margin for client'."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Bypass the barrier.",
+                    audio: "Stop losing premium deals over your tax status. Join the Dreamnity pre-launch waitlist in our bio right now.",
+                    visual: "Actor smiles, presenting a premium checkout mockup on their phone."
+                }
+            ]
+        },
+        {
+            id: 5,
+            cycle: 1,
+            title: "Reel 5: The Solo-Compliance Trap",
+            target: "Approved Core - Pointing out the fatal admin mistake of registering solo too early.",
+            vibe: "Warning, practical financial advice. Speaks directly to the middle-class hustle.",
+            setup: "Actor walking through an empty, modern office space or a clean corridor, speaking directly to camera.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Do NOT get a GST number.",
+                    audio: "Do NOT register for a GST number just to land one corporate client. It is a massive trap.",
+                    visual: "Actor stops walking, looking intensely at the lens. Snappy zoom-in."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll)",
+                    text: "The Compliance Cost Sink.",
+                    audio: "If you register for GST as a solo freelancer, you are signing away your creative time to administrative work. You now have to file monthly returns, pay a Chartered Accountant every single month, and even if you make zero rupees, you still have to file zero-returns or face severe penalties.",
+                    visual: "Fast cuts: Actor counting off compliance liabilities on their fingers."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Context (B-Roll)",
+                    text: "The Soloist Nightmare.",
+                    audio: "You started this business to create, not to become a part-time accountant. The system is fundamentally broken for solo builders. You need the corporate client to grow, but you cannot afford the compliance overhead.",
+                    visual: "B-Roll: Person looking exhausted, reviewing a complex taxation ledger under warm desk light."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "The legal loophole is here.",
+                    audio: "We are building the ultimate legal bypass. Skip the paperwork and keep your creative margins. Link in bio to join the Dreamnity waitlist.",
+                    visual: "Actor points directly to camera with a confident, supportive smile."
+                }
+            ]
+        },
+        {
+            id: 6,
+            cycle: 1,
+            title: "Reel 6: The Dreamnity Infrastructure",
+            target: "Approved Core - The Climax. Glorifying Dreamnity as the ultimate B2B financial engine.",
+            vibe: "Visionary, grand, highly cinematic. Gives the ultimate 'Aha!' moment.",
+            setup: "Actor standing in an architectural, premium designed space. Highly confident, crisp delivery.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "The ultimate B2B loophole.",
+                    audio: "This is the ultimate legal loophole to bill massive brands, give them the exact GST invoice they demand, and never touch a single tax return.",
+                    visual: "Actor stands facing a panoramic window, turning to address the lens with deep conviction."
+                },
+                {
+                    time: "0:08 - 0:25",
+                    type: "The Vision (A-Roll)",
+                    text: "Merchant of Record.",
+                    audio: "The solution to B2B freelance friction is a Merchant of Record. Instead of billing the corporate client directly, you use an intermediary platform. They act as the legal reseller of your services.",
+                    visual: "On-screen text: 'MERCHANT OF RECORD (MoR)'."
+                },
+                {
+                    time: "0:25 - 0:50",
+                    type: "The Grand Reveal (B-Roll)",
+                    text: "We are building Dreamnity.",
+                    audio: "This is exactly why we are building Dreamnity. As your Merchant of Record, Dreamnity attaches our corporate GST to your client invoice. The brand receives their Input Tax Credit, they pay securely through our portal, and the funds route cleanly to you. We absorb the legal liability, the tax filing, and the regulatory overhead.",
+                    visual: "High-fidelity, smooth kinetic graphic showing the transaction stream: 'Freelancer ➡️ Dreamnity MoR (GST Invoice Generated) ➡️ Corporate Client'."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Secure early access.",
+                    audio: "You get the premium deals; we handle the paperwork. Get on the early access waitlist in our bio right now.",
+                    visual: "Actor walks up to the camera with a firm, visionary nod. Screen cuts to deep indigo with the glowing Dreamnity Logo."
+                }
+            ]
+        },
 
-{
-id:1,
-cycle:1,
-type:'reel',
-title:"Reel 1: Vendor Onboarding Trap",
-target:"Corporate AP Compliance",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"If your corporate client loves your pitch but ghosts you during vendor onboarding, this is why.",
-visual:"B-roll of long corporate vendor forms."
-}
-]
-},
+        // --- CYCLE 2: ADVANCED SCALING (DIVERSIFIED, ALGORITHM-NATIVE, SAFETY & TRUST FOCUSED) ---
+        {
+            id: 7,
+            cycle: 2,
+            title: "Reel 7: The Upwork/Fiverr Escape",
+            target: "De-influencing platforms. Tapping into universal hatred of 20% platform fees.",
+            vibe: "Confrontational, liberating. 'Us vs. Them' algorithmic hook.",
+            setup: "Actor sitting outdoors holding a coffee, speaking casually but dropping hard truths.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Stop paying the 20% tax.",
+                    audio: "Giving twenty percent of your hard-earned paycheck to freelance marketplaces just for 'finding clients' is a scam. It's time to escape.",
+                    visual: "Actor looks directly into the lens. Fast, clean jump cut."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "The Fear of Moving Off-Platform.",
+                    audio: "You want to move your US clients off-platform, but you're terrified. You ask yourself: 'How do I invoice them? What if they scam me? What if their bank rejects my GPay number?' You stay on the platform not for the clients, but because you are paying for the safety of their checkout system.",
+                    visual: "B-Roll: Scrolling through an Upwork screen, highlighting a massive fee deduction, then cutting to a stressed freelancer."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "Bring your own safety.",
+                    audio: "You don't need them. You just need to bring your own enterprise-grade checkout. When you send an international client a premium, fully secure payment link that processes their credit card seamlessly, you establish instant trust. You look like a legitimate business, not a risky contractor.",
+                    visual: "Actor taps their phone screen, displaying a sleek Dreamnity payment interface."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Keep 100% of your money.",
+                    audio: "Ditch the 20% fees. We are building the payment infrastructure to help lancers go independent. Join the waitlist in our bio."
+                }
+            ]
+        },
+        {
+            id: 8,
+            cycle: 2,
+            title: "Reel 8: The 'Scammer' Anxiety",
+            target: "Relatability & Trust. Addressing the anxiety of looking unprofessional to global clients.",
+            vibe: "Humorous, self-aware, highly relatable pain point.",
+            setup: "Actor typing on a laptop, pausing, then looking at the camera with a face of pure dread.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Sending bank details feels illegal.",
+                    audio: "Does anyone else feel like an absolute scammer when a foreign client asks how to pay you, and you have to send a raw Swift code in an email?",
+                    visual: "Actor cringes, hands hovering over the keyboard."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "The Professional Image Drop.",
+                    audio: "You just spent two weeks delivering world-class UI design or code. You look like a genius. But the moment it comes to billing, you send a generic PDF and say 'Hey bestie, please wire the money to my local savings account.' It instantly kills your professional aura. Clients hate international wires—they want to click a button and use their corporate card.",
+                    visual: "B-Roll: Split screen of an amazing design portfolio vs. a messy, unformatted email with bank details."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "The 1-Click Trust Factor.",
+                    audio: "You need to match your billing to your skill level. Sending a secure, beautiful checkout link that instantly calculates currency and guarantees their transaction safety changes the entire dynamic. You instantly transition from a 'freelancer' to an international business.",
+                    visual: "Actor points to a graphic showing a '1-Click Pay' button."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Upgrade your aura.",
+                    audio: "We are building Dreamnity to give independent lancers a flawless checkout experience. Get early access in our bio."
+                }
+            ]
+        },
+        {
+            id: 9,
+            cycle: 2,
+            title: "Reel 9: The Nodal Escrow Guarantee",
+            target: "Absolute Financial Safety. Proving to the user that Dreamnity cannot touch their money.",
+            vibe: "Forensic, highly authoritative, reassuring. Ending platform anxiety.",
+            setup: "Actor sitting at a clean desk. A dynamic diagram pops up beside them.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Where is my money?",
+                    audio: "If a new payment platform tells you 'we hold your money safely'—run away. That is a massive red flag.",
+                    visual: "Actor leans forward. Direct, serious tone."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Breakdown (A-Roll + B-Roll)",
+                    text: "We don't touch your funds.",
+                    audio: "As an independent lancer, your biggest fear is a platform going bankrupt or freezing your funds. That is why Dreamnity is built differently. We literally cannot touch your money. When your client pays, the funds don't go into our corporate bank account. They go directly into an RBI-compliant Nodal Escrow account.",
+                    visual: "B-Roll: Sleek animated graphic showing a padlock on a 'Bank Escrow Node', bypassing the 'Company Wallet'."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Safety Proof (A-Roll)",
+                    text: "Bank-level automation.",
+                    audio: "This means the bank holds the funds, verifies the transaction, and automatically routes the INR directly to you. It is mathematically and legally impossible for us to hold your cash hostage. It is bank-grade security, built for independent creators.",
+                    visual: "Actor speaks with calm, absolute certainty."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Safe. Secure. Compliant.",
+                    audio: "Stop worrying about your payouts. Join the Dreamnity pre-launch waitlist via the link in our bio."
+                }
+            ]
+        },
+        {
+            id: 10,
+            cycle: 2,
+            title: "Reel 10: The 30-Day Ghost (Net-30 Scam)",
+            target: "Cashflow Lifestyle. Addressing the pain of chasing clients for money.",
+            vibe: "Relatable frustration, highly visual. Exposing outdated corporate practices.",
+            setup: "Actor sipping coffee, looking at a calendar graphic floating in the air.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "Net-30 is a scam.",
+                    audio: "The absolute worst part of being an independent lancer isn't the work. It's becoming a full-time debt collector for your own money.",
+                    visual: "Actor rolls their eyes, tapping a coffee cup on the desk."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "Chasing the invoice.",
+                    audio: "You deliver the project perfectly, send the invoice, and suddenly the client introduces you to the 'Net-30' scam. You wait thirty days. Then forty. Then you are sending awkward 'just checking in' emails while your own bills are due. Why? Because wire transfers require three levels of manual corporate approval.",
+                    visual: "B-Roll: Actor typing 'just bubbling this up to the top of your inbox' with a fake smile."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "Instant Card Settlements.",
+                    audio: "The fix is frictionless checkout. If you send them a secure Dreamnity link, their department head can just swipe a corporate expense card instantly. No accounts payable delays. No Net-30 excuses. Your invoice clears in two hours instead of a month.",
+                    visual: "Actor snaps their fingers. Graphic: '30 Days ➡️ 2 Hours'."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Get paid today.",
+                    audio: "Stop chasing your own money. Secure your spot on the Dreamnity waitlist right now."
+                }
+            ]
+        },
+        {
+            id: 11,
+            cycle: 2,
+            title: "Reel 11: The 'Paid-to-Play' Hack",
+            target: "Viral Hook - The Creator Fund. Highly shareable financial 'glitch' concept.",
+            vibe: "Excited, sharing a massive secret. High algorithmic potential.",
+            setup: "Actor holding their phone up, showing a green notification, looking genuinely hyped.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "A gateway that pays you.",
+                    audio: "I found a payment platform for lancers that literally pays you a bonus just to use it.",
+                    visual: "Actor points excitedly at the phone screen. High energy jump cut."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "Stop being a cost center.",
+                    audio: "Every payment gateway on earth—PayPal, Stripe, Payoneer—treats you like a cost center. They rob you of 4% plus exchange rate fees just to give you your own money. Dreamnity flipped the model. They realized that independent lancers are the ones bringing the volume.",
+                    visual: "B-Roll: Fast cuts of popular payment logos with a red 'X', transitioning to a clean Dreamnity logo."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "The Lancer Fund.",
+                    audio: "So they created a fund. On top of giving you zero-percent forex margins, every time you successfully process a client payment through their secure checkout, you earn a micro-dividend from their Lancer Fund. It is the first platform that actually rewards you for scaling your business.",
+                    visual: "Actor taps their temple. 'Mind blown' gesture."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Start earning bonuses.",
+                    audio: "Stop paying to get paid. The waitlist is open. Check the link in our bio before it fills up."
+                }
+            ]
+        },
+        {
+            id: 12,
+            cycle: 2,
+            title: "Reel 12: The Lancer Manifesto",
+            target: "Broad Scope - Redefining 'Freelancer' to 'Lancer'. High shareability/manifesto vibe.",
+            vibe: "Aspirational, powerful, redefining the industry. Main character energy.",
+            setup: "Cinematic lighting. Actor standing in a premium space. Slow, confident pacing.",
+            blocks: [
+                {
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "The word Freelancer is dead.",
+                    audio: "The word 'freelancer' is dead. It sounds like cheap labor, unreliability, and struggling to find the next gig.",
+                    visual: "Actor looks directly into the lens with absolute conviction."
+                },
+                {
+                    time: "0:08 - 0:30",
+                    type: "The Agitation (A-Roll + B-Roll)",
+                    text: "You are a business.",
+                    audio: "You aren't a freelancer anymore. You are a Lancer. You are an independent, sovereign business exporting high-value tech, design, and consulting to the world. But right now, you are being held back by consumer-grade tools. You are sending manual PDFs and using personal bank accounts like a hobbyist.",
+                    visual: "B-Roll: Split screen—a messy, cluttered desk vs a sleek, highly organized modern workspace."
+                },
+                {
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "Enterprise infrastructure.",
+                    audio: "Lancers require enterprise-grade infrastructure. You need automated corporate compliance, bank-grade escrow safety, and frictionless global checkouts. You need to look, operate, and bill like an institution, without ever losing your independence.",
+                    visual: "Actor steps forward. Graphic: 'LANCER = Sovereign Business'."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Enter the new era.",
+                    audio: "We are building the operating system for the Lancer era. Secure your early access spot in our bio."
+                }
+            ]
+        }
+    ];
 
-{
-id:2,
-cycle:1,
-type:'reel',
-title:"Reel 2: Export Tax Myth",
-target:"GST/LUT Compliance",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"Thinking you don't need to file GST for international work? That is a massive mistake.",
-visual:"Actor holding an export document."
-}
-]
-},
+    document.addEventListener('DOMContentLoaded', () => {
+        renderNavigation();
+        selectReel(1); 
+    });
 
-{
-id:3,
-cycle:1,
-type:'reel',
-title:"Reel 3: Canva Invoice Fail",
-target:"Invoicing Standards",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"Your Canva-designed PDF isn't a tax invoice, and that is why your payment is delayed.",
-visual:"Pretty invoice being crumpled up."
-}
-]
-},
+    function switchCycle(cycleNum) {
+        currentCycle = cycleNum;
+        const btn1 = document.getElementById('btn-cycle-1');
+        const btn2 = document.getElementById('btn-cycle-2');
+        
+        if (cycleNum === 1) {
+            btn1.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md";
+            btn2.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all";
+        } else {
+            btn2.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md";
+            btn1.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all";
+        }
 
-{
-id:4,
-cycle:1,
-type:'reel',
-title:"Reel 4: 18% Dead Cost",
-target:"ITC Understanding",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"To charge premium rates, stop sending receipts and start sending GST invoices.",
-visual:"Split screen of receipt vs GST Invoice."
-}
-]
-},
+        renderNavigation();
+        
+        // Auto-select first reel of the active cycle
+        const cycleReels = reelsData.filter(r => r.cycle === currentCycle);
+        if (cycleReels.length > 0) {
+            selectReel(cycleReels[0].id);
+        }
+    }
 
-{
-id:5,
-cycle:1,
-type:'reel',
-title:"Reel 5: The Solo-Compliance Trap",
-target:"Business Structuring",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"Stop registering for GST before you actually have to.",
-visual:"Actor counting compliance tasks."
-}
-]
-},
+    function renderNavigation() {
+        const navContainer = document.getElementById('reel-nav');
+        if (!navContainer) return;
+        navContainer.innerHTML = '';
+        
+        const filteredReels = reelsData.filter(r => r.cycle === currentCycle);
+        
+        filteredReels.forEach((reel, index) => {
+            const btn = document.createElement('button');
+            btn.id = `nav-btn-${reel.id}`;
+            btn.className = `reel-btn inactive w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent`;
+            btn.onclick = () => selectReel(reel.id);
+            btn.innerHTML = `
+                <div class="flex items-center justify-between w-full mb-1">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Asset 0${index + 1}</span>
+                    <span class="text-[9px] bg-indigo-950/80 text-indigo-400 border border-indigo-900/40 px-2 py-0.5 rounded font-bold">60S MAX</span>
+                </div>
+                <span class="font-heading font-bold text-base leading-tight mb-1 text-slate-100">${reel.title}</span>
+                <span class="text-xs text-slate-400 line-clamp-1">${reel.target}</span>
+            `;
+            navContainer.appendChild(btn);
+        });
+    }
 
-{
-id:6,
-cycle:1,
-type:'reel',
-title:"Reel 6: The Infrastructure Fix",
-target:"Merchant of Record Reveal",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"This is the legal bypass to bill big brands without the admin headache.",
-visual:"Dreamnity branding overlay."
-}
-]
-},
+    function selectReel(id) {
+        reelsData.forEach(r => {
+            const btn = document.getElementById(`nav-btn-${r.id}`);
+            if (btn) {
+                if (r.id === id) {
+                    btn.className = "reel-btn active w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent";
+                } else {
+                    btn.className = "reel-btn inactive w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent hover:border-slate-800";
+                }
+            }
+        });
 
-{
-id:7,
-cycle:2,
-type:'reel',
-title:"Reel 1: 3 Websites Every Freelancer Needs",
-target:"Outreach & Pitching",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"Freelancing in 2026 and not using these three sites? You're doing it the hard way.",
-visual:"Rapid-fire screen recordings."
-}
-]
-},
+        const reel = reelsData.find(r => r.id === id);
+        if (!reel) return;
 
-{
-id:8,
-cycle:2,
-type:'reel',
-title:"Reel 2: Why Clients Ghost You",
-target:"Client Communication",
-blocks:[
-{
-time:"0:00",
-type:"Hook",
-audio:"If clients keep ghosting you, you're probably making these three basic mistakes.",
-visual:"Client vs freelancer comparison."
-}
-]
-}
-];
+        const contentContainer = document.getElementById('script-content');
+        if (!contentContainer) return;
+        
+        let blocksHTML = '';
+        reel.blocks.forEach(block => {
+            let textOverlayHTML = block.text ? `<div class="mb-3"><span class="badge bg-slate-900 text-indigo-300 border border-slate-800 mr-2 font-heading">On-Screen Graphic</span> <span class="font-semibold text-slate-200">"${block.text}"</span></div>` : '';
+            let visualHTML = block.visual ? `<div class="mb-3"><span class="badge bg-slate-900 text-cyan-400 border border-slate-800 mr-2 font-heading">Aesthetic direction</span> <span class="text-xs text-slate-400 font-mono">${block.visual}</span></div>` : '';
+            
+            blocksHTML += `
+                <div class="mb-10 relative pl-8">
+                    <div class="absolute left-0 top-2 bottom-[-2.5rem] w-0.5 bg-slate-800"></div>
+                    <div class="absolute left-[-5px] top-2.5 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-slate-950"></div>
 
-function switchCycle(cycle){
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-indigo-950/80 text-indigo-400 border border-indigo-900/40 text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-sm">${block.time}</span>
+                        <span class="font-heading font-extrabold text-slate-100 text-lg">${block.type}</span>
+                    </div>
+                    
+                    ${textOverlayHTML}
+                    ${visualHTML}
+                    
+                    <div class="mt-4 bg-slate-900/30 p-5 rounded-2xl border border-slate-800/80 relative">
+                        <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-wider">DIALOGUE SCRIPT (Viral Target)</span>
+                        <p class="text-slate-200 font-medium text-[15px] leading-relaxed">
+                            "${block.audio}"
+                        </p>
+                    </div>
+                </div>
+            `;
+        });
 
-currentCycle = cycle;
-
-document.getElementById('btn-cycle-1')
-.classList.remove('bg-indigo-600','text-white');
-
-document.getElementById('btn-cycle-2')
-.classList.remove('bg-indigo-600','text-white');
-
-document.getElementById(`btn-cycle-${cycle}`)
-.classList.add('bg-indigo-600','text-white');
-
-renderNav();
-
-const firstReel = reelsData.find(
-reel => reel.cycle === cycle
-);
-
-if(firstReel){
-selectReel(firstReel.id);
-}
-}
-
-function renderNav(){
-
-const container = document.getElementById('reel-nav');
-
-container.innerHTML = '';
-
-reelsData
-.filter(r => r.cycle === currentCycle)
-.forEach((r,index)=>{
-
-const btn = document.createElement('button');
-
-btn.className =
-'reel-btn inactive w-full text-left px-5 py-4 rounded-xl';
-
-btn.id = `btn-${r.id}`;
-
-btn.innerHTML = `
-<span class="text-[10px] font-bold uppercase tracking-widest text-indigo-400">
-${r.type}
-</span>
-
-<span class="font-bold text-sm mt-1 block">
-${r.title}
-</span>
-
-<span class="text-xs text-slate-500 mt-2 block">
-${r.target}
-</span>
-`;
-
-btn.onclick = () => selectReel(r.id);
-
-container.appendChild(btn);
-
-});
-}
-
-function selectReel(id){
-
-document.querySelectorAll('.reel-btn').forEach(btn=>{
-btn.classList.remove('active');
-btn.classList.add('inactive');
-});
-
-const activeBtn = document.getElementById(`btn-${id}`);
-
-activeBtn.classList.remove('inactive');
-activeBtn.classList.add('active');
-
-const reel = reelsData.find(r => r.id === id);
-
-const content = document.getElementById('script-content');
-
-content.innerHTML = `
-
-<div class="mb-8">
-
-<div class="flex items-center gap-3 mb-4">
-
-<span class="px-3 py-1 rounded-full bg-indigo-900/50 text-indigo-300 text-xs font-bold uppercase">
-${reel.type}
-</span>
-
-<span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs">
-${reel.target}
-</span>
-
-</div>
-
-<h2 class="text-3xl font-black text-white mb-3">
-${reel.title}
-</h2>
-
-<p class="text-slate-400">
-Strategic content asset for ${reel.target}.
-</p>
-
-</div>
-
-<div class="space-y-5">
-
-${reel.blocks.map(block => `
-
-<div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
-
-<div class="flex justify-between items-center mb-4">
-
-<span class="font-bold text-indigo-400">
-${block.type}
-</span>
-
-<span class="text-xs text-slate-500">
-${block.time}
-</span>
-
-</div>
-
-<div class="space-y-4">
-
-<div>
-<p class="text-xs uppercase tracking-wider text-slate-500 mb-1">
-Audio
-</p>
-
-<p class="text-slate-200">
-${block.audio}
-</p>
-</div>
-
-<div>
-<p class="text-xs uppercase tracking-wider text-slate-500 mb-1">
-Visual Direction
-</p>
-
-<p class="text-slate-400">
-${block.visual}
-</p>
-</div>
-
-</div>
-
-</div>
-
-`).join('')}
-
-</div>
-`;
-}
-
-renderNav();
-selectReel(1);
+        contentContainer.innerHTML = `
+            <div class="script-block" id="block-${reel.id}">
+                <div class="border-b border-slate-800 pb-6 mb-8 relative">
+                    <h2 class="text-3xl font-extrabold font-heading text-white mb-3 pr-20">${reel.title}</h2>
+                    <div class="inline-flex items-center bg-slate-900/50 text-slate-400 px-3 py-1.5 rounded-xl text-xs mb-6 border border-slate-800">
+                        <span class="font-bold mr-2 text-indigo-400">Viral Strategy:</span> ${reel.target}
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-2 border-t border-slate-900 pt-6">
+                        <div>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Speaker Tone & Delivery</h4>
+                            <p class="text-xs text-slate-300 font-medium leading-relaxed">${reel.vibe}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Aesthetic Environment</h4>
+                            <p class="text-xs text-slate-300 font-medium leading-relaxed">${reel.setup}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-bold font-heading text-white mb-8">
+                    Production Timeline Blueprint
+                </h3>
+                <div class="script-timeline ml-2">
+                    ${blocksHTML}
+                </div>
+            </div>
+        `;
+    }
 </script>
 
 </body>
 </html>
-```
