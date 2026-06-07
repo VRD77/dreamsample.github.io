@@ -3,837 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dreamnity | Audience Building Pre-Production</title>
+<title>Dreamnity | Campaign Content Portal</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
-        color: #0f172a;
-    }
-    h1, h2, h3, h4, h5,.font-heading {
-        font-family: 'Outfit', sans-serif;
-    }
-   .text-gradient {
-        background: linear-gradient(to right, #0284c7, #4f46e5);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-   .reel-btn {
-        transition: all 0.2s ease-in-out;
-    }
-   .reel-btn.active {
-        background-color: #ffffff;
-        border-left: 4px solid #4f46e5;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        color: #312e81;
-    }
-   .reel-btn.inactive {
-        background-color: transparent;
-        border-left: 4px solid transparent;
-        color: #475569;
-    }
-   .reel-btn.inactive:hover {
-        background-color: #f1f5f9;
-        color: #0f172a;
-    }
-   .script-block {
-        animation: fadeIn 0.4s ease-out;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-   .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
-    }
-   .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-    }
-   .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: #cbd5e1;
-        border-radius: 10px;
-    }
-   .badge {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
+    body { font-family: 'Inter', sans-serif; background-color: #030712; color: #f3f4f6; }
+    .text-gradient { background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .reel-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .reel-btn.active { background-color: #111827; border-left: 4px solid #6366f1; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); color: #ffffff; }
+    .reel-btn.inactive { background-color: transparent; border-left: 4px solid transparent; color: #9ca3af; }
+    .reel-btn.inactive:hover { background-color: #0f172a; color: #f3f4f6; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #374151; border-radius: 10px; }
 </style>
 </head>
-<body class="antialiased pb-24 selection:bg-indigo-100 selection:text-indigo-900">
+<body class="antialiased pb-24 selection:bg-indigo-900 selection:text-indigo-200">
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-    
-    <header class="mb-12 border-b border-slate-200 pb-8 text-center md:text-left relative">
-        <div class="badge bg-slate-100 text-slate-700 border border-slate-200 mb-4">
-            Phase 1: Pre-Launch Audience Building
+    <header class="mb-12 border-b border-slate-900 pb-10 text-center md:text-left">
+        <div class="inline-block px-3 py-1 rounded-full bg-indigo-950/50 text-indigo-400 border border-indigo-900/50 mb-4 font-bold text-xs uppercase tracking-widest">
+            Audience Content Portal
         </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-slate-900">
-            <span class="text-gradient">Dreamnity</span> Content Strategy
+        <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white">
+            <span class="text-gradient">Dreamnity</span> Strategic Assets
         </h1>
-        <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            A successful product launch is not a single event; it is a culmination of storytelling that makes people want your product before they can even buy it. Since the core platform is currently in development, these scripts are engineered strictly for organic audience capture. We utilize educational value regarding strict tax compliance and industry transparency to build authority and deep curiosity before the July launch.
+        <p class="text-base text-slate-400 max-w-2xl leading-relaxed">
+            Content strategy for Phase 1. Cycle 1 builds compliance foundations, Cycle 2 accelerates scaling with high-engagement trends.
         </p>
     </header>
 
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-10">
-        <h2 class="text-2xl font-bold font-heading text-slate-800 mb-4">
-            Strategic Content Pillars
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-        <div>
-            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Campaign Timeline</span>
-            <h3 class="text-lg font-bold font-heading text-slate-800">Select Production Cycle</h3>
-        </div>
-        <div class="flex bg-slate-100 p-1.5 rounded-xl w-full md:w-auto min-w-[320px]">
-            <button onclick="switchCycle(1)" id="btn-cycle-1" class="cycle-tab flex-1 py-2.5 px-6 text-center rounded-lg font-heading font-bold text-sm bg-white text-indigo-950 shadow-sm">
-                Cycle 1: B2B Foundations
-            </button>
-            <button onclick="switchCycle(2)" id="btn-cycle-2" class="cycle-tab flex-1 py-2.5 px-6 text-center rounded-lg font-heading font-bold text-sm text-slate-600 hover:text-slate-900">
-                Cycle 2: Trend & Acquisition
-            </button>
-        </div>
+    <div class="flex bg-slate-950 p-1.5 rounded-2xl border border-slate-900 max-w-sm mb-8">
+        <button onclick="switchCycle(1)" id="btn-cycle-1" class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md">Cycle 1</button>
+        <button onclick="switchCycle(2)" id="btn-cycle-2" class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all">Cycle 2</button>
     </div>
 
-    <div class="flex flex-col md:flex-row gap-8 items-start">
-        
-        <div class="w-full md:w-1/3 flex flex-col gap-2 sticky top-6 custom-scrollbar max-h-[80vh] overflow-y-auto" id="reel-nav">
-            </div>
-
-        <div class="w-full md:w-2/3 bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-10 min-h-[600px] relative overflow-hidden" id="script-content">
-             </div>
-
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1 flex flex-col gap-3 max-h-[600px] overflow-y-auto custom-scrollbar pr-2" id="reel-nav"></div>
+        <div class="lg:col-span-2 bg-slate-950 rounded-3xl border border-slate-900 p-8 min-h-[600px] flex flex-col" id="script-content"></div>
     </div>
 </div>
 
 <script>
     let currentCycle = 1;
-
     const reelsData = [
-        // --- CYCLE 1: B2B FOUNDATIONS (UNTOUCHED) ---
-        {
-            id: 1,
-            cycle: 1,
-            title: "Reel 1: The Vendor Onboarding Trap",
-            target: "Exposing the hidden friction of B2B client acquisition.",
-            vibe: "Highly engaging, slightly dramatic. Dropping a truth bomb.",
-            setup: "Actor sitting in a dimly lit, aesthetic room with a laptop glowing. Speaking intensely.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "Getting a YES is only 10% of the battle.",
-                    audio: "Getting a corporate client to say 'YES' to your freelance pitch is only 10 percent of the battle.",
-                    visual: "Actor leans in. Eye contact is direct. Fast, snappy cut."
-                },
-                {
-                    time: "0:08 - 0:30",
-                    type: "The Narrative (A-Roll + B-Roll)",
-                    text: "The Accounts Payable Wall.",
-                    audio: "The other 90 percent is surviving their vendor onboarding. You celebrate the closed deal, but then their finance team sends you a massive vendor form asking for GST certificates, tax declarations, and compliance proofs.",
-                    visual: "Fast B-roll cuts: Scrolling through a dense 10-page corporate vendor registration PDF."
-                },
-                {
-                    time: "0:30 - 0:50",
-                    type: "The Agitation (A-Roll)",
-                    text: "Losing the contract.",
-                    audio: "If you can't provide enterprise-level tax documents, they will literally cancel the contract. Massive companies cannot pay unregistered individuals easily because it creates a compliance nightmare for their books.",
-                    visual: "Actor looks serious, pointing at the camera."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The Call to Action (A-Roll)",
-                    text: "Borrow infrastructure.",
-                    audio: "You need to borrow enterprise infrastructure. We are building Dreamnity to solve exactly this. Link in bio to join the waitlist.",
-                    visual: "Actor maintains intense eye contact with a firm nod."
-                }
-            ]
-        },
-        {
-            id: 2,
-            cycle: 1,
-            title: "Reel 2: The Export Tax Delusion",
-            target: "Compliance Truths - Debunking the dangerous 'no tax' myth for international payments.",
-            vibe: "Highly informative, sarcastic, professional. Shocks the viewer out of dangerous habits.",
-            setup: "Actor sitting at a clean minimalist desk, looking over a government PDF document. Helpful but firm.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "Tax evasion is not an aesthetic.",
-                    audio: "Avoiding the tax man because your client is located in New York is top-tier delusion. Let's talk about zero-rated export laws before you get an audit notice.",
-                    visual: "Actor taps their fingers on a compliance paper, looking directly into the camera."
-                },
-                {
-                    time: "0:08 - 0:30",
-                    type: "The Breakdown (A-Roll + B-Roll)",
-                    text: "The LUT Requirement.",
-                    audio: "A lot of Indian freelancers assume that because international work is an 'export of services' with zero GST, they don't have to report it. That is completely wrong. To legally claim that zero-percent tax status, you are required to file a Letter of Undertaking with the government every single year. Ignore this, and you are technically liable for a full eighteen percent GST.",
-                    visual: "B-Roll: Highlighting the direct 'GST RFD-11 LUT' section on the government GST portal interface."
-                },
-                {
-                    time: "0:30 - 0:50",
-                    type: "The Vision (A-Roll)",
-                    text: "The compliance bottleneck.",
-                    audio: "You cannot afford to play games with tax departments. You either need to keep a chartered accountant on retainer to manage LUT filings and monthly zero-returns, or run your payments through an infrastructure that does it for you.",
-                    visual: "Actor looks seriously at the camera, raising an eyebrow."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The Call to Action (A-Roll)",
-                    text: "Automate your billing.",
-                    audio: "Stop taking massive compliance risks with your business. Join the early access waitlist for Dreamnity in our bio.",
-                    visual: "Actor nods confidently as the screen turns to slate."
-                }
-            ]
-        },
-        {
-            id: 3,
-            cycle: 1,
-            title: "Reel 3: The Canva Invoice Mistake",
-            target: "Invoice Rejection - Establishing authority by calling out a massive B2B amateur error.",
-            vibe: "Slightly brutal, highly practical, direct warning.",
-            setup: "Actor holding up their phone, looking at a beautiful but non-compliant design draft. Speaking with 'let's fix this' energy.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "Pretty PDFs are trash.",
-                    audio: "Your pretty pastel Canva PDF with 'Invoice' typed in comic sans is not a real invoice. It is just a receipt. And corporate finance teams will reject it instantly.",
-                    visual: "Actor drags a mock document into a trash icon on their tablet screen."
-                },
-                {
-                    time: "0:08 - 0:30",
-                    type: "The Agitation (A-Roll + B-Roll)",
-                    text: "The Corporate AP Wall.",
-                    audio: "You spend weeks pitching an Indian client. They say yes, you send over your beautifully designed PDF, and... nothing. You get ghosted. It's not your work; it's their accounts payable team. Corporate finance operates on strict audit guidelines. If your invoice is missing SAC codes, precise GST breakdowns, and place of supply data, they legally cannot pay you.",
-                    visual: "B-Roll: Fast screen recording of a messy Canva template compared to a structured, legally compliant accounting layout."
-                },
-                {
-                    time: "0:30 - 0:50",
-                    type: "The Solution (A-Roll)",
-                    text: "Enterprise billing standards.",
-                    audio: "Stop billing like a hobbyist if you want to charge like an agency. You need structured, automated invoice compliance that matches corporate standards instantly.",
-                    visual: "Actor folds their arms, presenting a confident, professional stance."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The Call to Action (A-Roll)",
-                    text: "Bypass the Canva mess.",
-                    audio: "We built Dreamnity to generate completely compliant B2B tax invoices automatically. Link in bio to secure early access.",
-                    visual: "Clean product overlay of Dreamnity's pristine invoice dashboard."
-                }
-            ]
-        },
-        {
-            id: 4,
-            cycle: 1,
-            title: "Reel 4: The 18% Dead Cost",
-            target: "Approved Core - Re-optimized with the specific premium agency & invoice/receipt hook.",
-            vibe: "High agency, premium, analytical, eye-opening.",
-            setup: "Actor standing in a beautifully designed modern loft or minimalist studio. Confident, slow pacing.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "GST Invoice vs. Receipt.",
-                    audio: "If you want to charge premium agency rates, you have to send a legal GST invoice, not just a receipt without GST.",
-                    visual: "Actor looks directly into the lens. Snappy text overlays appear on either side."
-                },
-                {
-                    time: "0:08 - 0:25",
-                    type: "The Context Breath (A-Roll)",
-                    text: "Define the difference.",
-                    audio: "Let's take a quick breath and define this clearly. A PDF without a GST number isn't an invoice; legally, it's just a receipt. Corporate accounts teams absolutely hate receipts because they can't claim Input Tax Credit on them.",
-                    visual: "Text overlay splits screen cleanly: 'GST INVOICE (Tax Credit)' vs 'BASIC RECEIPT (No Tax Credit)'."
-                },
-                {
-                    time: "0:25 - 0:50",
-                    type: "The Agitation (A-Roll + B-Roll)",
-                    text: "The 18% Penalty.",
-                    audio: "They operate purely on Input Tax Credit. If they pay a registered agency, they get that eighteen percent back from the government. If they pay you—an unregistered freelancer with a receipt—they can't claim a rupee. You become an eighteen percent dead cost on their books. You are literally costing them money.",
-                    visual: "B-Roll: Graphic illustrating the math: '₹1,00,000 payment + Unregistered Vendor = ₹18,000 lost margin for client'."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The Call to Action (A-Roll)",
-                    text: "Bypass the barrier.",
-                    audio: "Stop losing premium deals over your tax status. Join the Dreamnity pre-launch waitlist in our bio right now.",
-                    visual: "Actor smiles, presenting a premium checkout mockup on their phone."
-                }
-            ]
-        },
-        {
-            id: 5,
-            cycle: 1,
-            title: "Reel 5: The Solo-Compliance Trap",
-            target: "Approved Core - Pointing out the fatal admin mistake of registering solo too early.",
-            vibe: "Warning, practical financial advice. Speaks directly to the middle-class hustle.",
-            setup: "Actor walking through an empty, modern office space or a clean corridor, speaking directly to camera.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "Do NOT get a GST number.",
-                    audio: "Do NOT register for a GST number just to land one corporate client. It is a massive trap.",
-                    visual: "Actor stops walking, looking intensely at the lens. Snappy zoom-in."
-                },
-                {
-                    time: "0:08 - 0:30",
-                    type: "The Agitation (A-Roll)",
-                    text: "The Compliance Cost Sink.",
-                    audio: "If you register for GST as a solo freelancer, you are signing away your creative time to administrative work. You now have to file monthly returns, pay a Chartered Accountant every single month, and even if you make zero rupees, you still have to file zero-returns or face severe penalties.",
-                    visual: "Fast cuts: Actor counting off compliance liabilities on their fingers."
-                },
-                {
-                    time: "0:30 - 0:50",
-                    type: "The Context (B-Roll)",
-                    text: "The Soloist Nightmare.",
-                    audio: "You started this business to create, not to become a part-time accountant. The system is fundamentally broken for solo builders. You need the corporate client to grow, but you cannot afford the compliance overhead.",
-                    visual: "B-Roll: Person looking exhausted, reviewing a complex taxation ledger under warm desk light."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The Call to Action (A-Roll)",
-                    text: "The legal loophole is here.",
-                    audio: "We are building the ultimate legal bypass. Skip the paperwork and keep your creative margins. Link in bio to join the Dreamnity waitlist.",
-                    visual: "Actor points directly to camera with a confident, supportive smile."
-                }
-            ]
-        },
-        {
-            id: 6,
-            cycle: 1,
-            title: "Reel 6: The Dreamnity Infrastructure",
-            target: "Approved Core - The Climax. Glorifying Dreamnity as the ultimate B2B financial engine.",
-            vibe: "Visionary, grand, highly cinematic. Gives the ultimate 'Aha!' moment.",
-            setup: "Actor standing in an architectural, premium designed space. Highly confident, crisp delivery.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "The ultimate B2B loophole.",
-                    audio: "This is the ultimate legal loophole to bill massive brands, give them the exact GST invoice they demand, and never touch a single tax return.",
-                    visual: "Actor stands facing a panoramic window, turning to address the lens with deep conviction."
-                },
-                {
-                    time: "0:08 - 0:25",
-                    type: "The Vision (A-Roll)",
-                    text: "Merchant of Record.",
-                    audio: "The solution to B2B freelance friction is a Merchant of Record. Instead of billing the corporate client directly, you use an intermediary platform. They act as the legal reseller of your services.",
-                    visual: "On-screen text: 'MERCHANT OF RECORD (MoR)'."
-                },
-                {
-                    time: "0:25 - 0:50",
-                    type: "The Grand Reveal (B-Roll)",
-                    text: "We are building Dreamnity.",
-                    audio: "This is exactly why we are building Dreamnity. As your Merchant of Record, Dreamnity attaches our corporate GST to your client invoice. The brand receives their Input Tax Credit, they pay securely through our portal, and the funds route cleanly to you. We absorb the legal liability, the tax filing, and the regulatory overhead.",
-                    visual: "High-fidelity, smooth kinetic graphic showing the transaction stream: 'Freelancer ➡️ Dreamnity MoR (GST Invoice Generated) ➡️ Corporate Client'."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The Call to Action (A-Roll)",
-                    text: "Secure early access.",
-                    audio: "You get the premium deals; we handle the paperwork. Get on the early access waitlist in our bio right now.",
-                    visual: "Actor walks up to the camera with a firm, visionary nod. Screen cuts to deep indigo with the glowing Dreamnity Logo."
-                }
-            ]
-        },
-
-        // --- CYCLE 2: TREND-BASED ENGAGEMENT & ACQUISITION ---
-        {
-            id: 7,
-            cycle: 2,
-            type: "reel",
-            title: "Reel 1: 3 Websites Every Freelancer Must Know",
-            target: "Top-of-funnel value offering tools, seamlessly inserting Dreamnity into the tech stack.",
-            vibe: "Helpful, fast-paced, tech-savvy. High save & share value.",
-            setup: "Graphical images with SFX followed by the speaker surrounded by the floating logos of the tools.",
-            blocks: [
-                {
-                    time: "0:00 - 0:05",
-                    type: "The Hook (A-Roll)",
-                    text: "Blurred logos of the tools.",
-                    audio: "If you're a freelancer in 2026 and NOT using these websites… you're honestly missing a lot.",
-                    visual: "Fast cuts. Dynamic visuals to grab immediate attention."
-                },
-                {
-                    time: "0:05 - 0:22",
-                    type: "Tool 1: Apollo.io (B-Roll)",
-                    text: "Apollo.io walkthrough interface.",
-                    audio: "Starting off with Apollo.io. This is probably one of the easiest ways to find actual clients online. You can search companies, founders, startups, marketing heads—and even get verified work emails for cold outreach.",
-                    visual: "B-roll of finding leads/emails on Apollo."
-                },
-                {
-                    time: "0:22 - 0:38",
-                    type: "Tool 2: Gamma (B-Roll)",
-                    text: "Strong pitch = Strong impression.",
-                    audio: "Number 2 is Gamma. Most freelancers send boring PDFs that might not grab the client's attention. With Gamma, you can turn your ideas into clean client proposals and pitch decks in literally minutes. Congrats with your first client!",
-                    visual: "B-roll of an AI-generated presentation."
-                },
-                {
-                    time: "0:38 - 0:48",
-                    type: "Dreamnity Mid-Roll Insert",
-                    text: "The part nobody talks about.",
-                    audio: "But honestly… getting the client is only half the process. Then comes invoices, payments, international transfers, all the backend chaos… and that’s where Dreamnity comes hand in hand to make freelancing feel less messy. Check out our website for more information.",
-                    visual: "Small timer below indicating the time for explanation of Dreamnity."
-                },
-                {
-                    time: "0:48 - 1:05",
-                    type: "Tool 3: Notion & CTA",
-                    text: "Comment TOOLS ↓",
-                    audio: "Moving on to number 3 - Notion. This is probably the best place to manage clients, projects, deadlines, notes—basically your entire freelance life. Comment 'TOOLS' and we’ll send all the links.",
-                    visual: "B-roll of organized freelance workspace in Notion."
-                }
-            ]
-        },
-        {
-            id: 8,
-            cycle: 2,
-            type: "reel",
-            title: "Reel 2: Why Clients Ghost You",
-            target: "Actionable advice highlighting the need for professional business infrastructure.",
-            vibe: "Direct, educational, problem-solving.",
-            setup: "Fast cuts. Message notifications fading. Seen ticks. Empty inbox visuals.",
-            blocks: [
-                {
-                    time: "0:00 - 0:05",
-                    type: "The Hook (A-Roll)",
-                    text: "Why clients ghost freelancers.",
-                    audio: "If clients keep disappearing after showing interest… you might be making one of these mistakes without realizing it.",
-                    visual: "Actor speaks directly with an empathetic but firm tone."
-                },
-                {
-                    time: "0:05 - 0:20",
-                    type: "Mistake 1: Vague Messaging",
-                    text: "Clarity gets replies.",
-                    audio: "First mistake — sending vague messages. Most freelancers say stuff like: 'I do editing, design, marketing, websites…' That tells the client absolutely nothing. Instead, clearly explain the exact result you help them achieve. Like: 'I help gyms create short-form videos that increase membership leads.'",
-                    visual: "B-roll of long confusing DMs/emails."
-                },
-                {
-                    time: "0:20 - 0:34",
-                    type: "Mistake 2: Slow Responses",
-                    text: "Fast replies win clients.",
-                    audio: "Second — replying too late. If a client replies and you disappear for 8 hours, there’s a high chance they already moved to another freelancer. Even a quick: 'Hey, I saw this — I’ll send details soon' keeps the conversation alive.",
-                    visual: "B-roll of delayed replies and clock ticking."
-                },
-                {
-                    time: "0:34 - 0:52",
-                    type: "Mistake 3: Unprofessional Infrastructure",
-                    text: "Dreamnity — simplifying the business side of freelancing.",
-                    audio: "And third — looking unprofessional after getting the client. One freelancer actually lost a really good client because the company needed proper GST invoices and structured payment workflows… and they simply weren’t prepared for it. A lot of companies care about professionalism just as much as skill. That’s where Dreamnity comes hand in hand by helping freelancers handle invoices, payments and workflows in a much cleaner and professional way.",
-                    visual: "B-roll of messy invoices, random payment screenshots, confusing documents."
-                },
-                {
-                    time: "0:52 - 1:05",
-                    type: "The CTA",
-                    text: "Comment CLIENT ↓",
-                    audio: "Comment 'CLIENT' and we’ll send some free tools that help freelancers look more professional.",
-                    visual: "Actor points to the comment section."
-                }
-            ]
-        },
-        {
-            id: 9,
-            cycle: 2,
-            type: "carousel",
-            title: "Carousel 1: The Freelancer Skill Tree",
-            target: "A gamified visual concept comparing creative skills to business infrastructure.",
-            vibe: "Gamified, engaging, structured like a video game stat screen.",
-            setup: "A 4-page swipeable Instagram Carousel graphic.",
-            blocks: [
-                {
-                    time: "Slide 1",
-                    type: "The Hook (Cover Image)",
-                    text: "FREELANCER SKILL TREE",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "Your build: \n- Finding Clients — MAXED OUT\n- Getting Paid — Still Locked\nSwipe to see your stats →"
-                },
-                {
-                    time: "Slide 2",
-                    type: "The Acquisition Stats",
-                    text: "CLIENT ACQUISITION ⭐⭐⭐⭐⭐",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "You know how to:\n✓ Cold email\n✓ Network\n✓ Pitch\n✓ Find opportunities\n\nDifficulty: Easy"
-                },
-                {
-                    time: "Slide 3",
-                    type: "The Business Stats",
-                    text: "GETTING PAID ⭐☆☆☆☆",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "Current skills:\n✗ GST\n✗ Invoicing\n✗ Payment tracking\n✗ Compliance\n✗ International payments\n\nDifficulty: Nightmare Mode"
-                },
-                {
-                    time: "Slide 4",
-                    type: "The Power-Up (CTA)",
-                    text: "NEW SKILL UNLOCKED: DREAMNITY",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "* GST-Ready Invoicing\n* Global Payment Collection\n* Merchant of Record Infrastructure\n* Clear Payout Tracking\n* Corporate-Ready Billing\n* Compliance Built In\n\nEvery freelancer upgrades their skills. Very few upgrade their systems. Level up the business side of freelancing.\n[Dreamnity Logo]"
-                }
-            ]
-        },
-        {
-            id: 10,
-            cycle: 2,
-            type: "reel",
-            title: "Reel 3: The Client's Perspective",
-            target: "Flipping the script to show what B2B clients actually care about.",
-            vibe: "Empathetic to the client, eye-opening for the freelancer.",
-            setup: "B-roll heavy, professional tone. Putting the viewer in the shoes of the person paying them.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (A-Roll)",
-                    text: "Would you hire them?",
-                    audio: "Imagine you're a business owner looking to hire a freelancer. You find someone talented. The portfolio looks great. The price works. Everything seems perfect.",
-                    visual: "Actor speaks thoughtfully, looking into the lens."
-                },
-                {
-                    time: "0:08 - 0:25",
-                    type: "The Problem (B-Roll)",
-                    text: "Talent isn't the concern. Process is.",
-                    audio: "But then your finance team asks: 'Can they provide proper invoices?' 'How do we process payments?' 'Do they have the required documentation?' Suddenly hiring a freelancer feels risky.",
-                    visual: "B-roll of a stressed finance team, disorganized invoices, documents, emails."
-                },
-                {
-                    time: "0:25 - 0:35",
-                    type: "The Twist",
-                    text: "They came prepared.",
-                    audio: "But your freelancer has already found the solution.",
-                    visual: "A smooth transition to a clean, highly organized digital workspace."
-                },
-                {
-                    time: "0:35 - 0:52",
-                    type: "Dreamnity Introduction",
-                    text: "✓ GST-Ready Invoices ✓ Merchant of Record",
-                    audio: "Introducing Dreamnity. A platform that helps freelancers operate professionally with GST-ready invoicing, global payment collection, compliant billing, and clear payout tracking. So businesses get the structure they expect, while freelancers stay focused on the work.",
-                    visual: "Graphics highlighting features popping up cleanly on screen."
-                },
-                {
-                    time: "0:52 - 1:00",
-                    type: "The Outro",
-                    text: "Look like a business. Work like a freelancer.",
-                    audio: "So the next time you hire a freelancer, you don't need any doubt. Because you know Dreamnity.",
-                    visual: "Actor smiles. Final slogan text appears."
-                }
-            ]
-        },
-        {
-            id: 11,
-            cycle: 2,
-            type: "reel",
-            title: "Reel 4: Freelancer vs. Agency (Expectations)",
-            target: "Debunking the skill gap and highlighting the infrastructure gap.",
-            vibe: "Truth bomb, strategic, professional.",
-            setup: "Actor looking directly at camera, confident delivery.",
-            blocks: [
-                {
-                    time: "0:00 - 0:15",
-                    type: "The Hook (A-Roll)",
-                    text: "Freelancer VS Agency",
-                    audio: "Most companies don't actually prefer agencies. If a freelancer and an agency can do the exact same quality of work... why do companies often choose the agency?",
-                    visual: "Actor poses the question directly to the viewer."
-                },
-                {
-                    time: "0:15 - 0:35",
-                    type: "The Twist (B-Roll)",
-                    text: "✓ Invoices ✓ Compliance ✓ Accountability",
-                    audio: "It's usually not about the work. Companies prefer structure. They want proper invoices. Clear payment processes. Compliance. Accountability. And someone who looks prepared to handle larger projects.",
-                    visual: "B-roll of invoices, contracts, payment dashboards, and approval workflows."
-                },
-                {
-                    time: "0:35 - 0:45",
-                    type: "The Reality Check",
-                    text: "Skill isn't the problem.",
-                    audio: "The truth is... many freelancers are just as talented as agencies. They simply don't have the business infrastructure companies expect.",
-                    visual: "B-roll of a highly skilled freelancer working alone."
-                },
-                {
-                    time: "0:45 - 1:00",
-                    type: "The Solution",
-                    text: "Work or System?",
-                    audio: "That's exactly why we're building Dreamnity. With GST-ready invoicing, global payment collection, payout tracking and compliant billing, freelancers can operate more professionally without turning into an agency. Would you choose the better work or the better system?",
-                    visual: "Dreamnity intro. Ends on a thought-provoking question to drive comments."
-                }
-            ]
-        },
-        {
-            id: 12,
-            cycle: 2,
-            type: "carousel",
-            title: "Carousel 2: The Freelancer Iceberg",
-            target: "A powerful visual metaphor for the unseen administrative burden of freelancing.",
-            vibe: "Cinematic, metaphor-driven, revealing.",
-            setup: "A 4-page swipeable Instagram Carousel graphic. Metaphor format.",
-            blocks: [
-                {
-                    time: "Slide 1",
-                    type: "The Hook (Cover Image)",
-                    text: "THE FREELANCER ICEBERG",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "A massive cinematic iceberg. Only 20% visible above water. 80% hidden below. A tiny freelancer standing on top. A mysterious submarine silhouette visible underwater.\n\nTEXT:\nWhat everyone sees.\nWhat nobody talks about.\nSwipe to dive deeper →"
-                },
-                {
-                    time: "Slide 2",
-                    type: "The Visible & Invisible",
-                    text: "ABOVE WATER vs BELOW WATER",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "Zoom into the iceberg.\n\nABOVE WATER (The part everyone posts on LinkedIn):\n- Finding Clients\n- Building a Portfolio\n- Delivering Great Work\n- Growing Your Income\n- Working From Anywhere\n\nBELOW WATER (The part nobody tells you about):\n- Chasing Payments\n- GST & Tax Questions\n- International Transfers\n- Invoice Management\n- Corporate Requirements\n- Compliance & Documentation"
-                },
-                {
-                    time: "Slide 3",
-                    type: "The Submarine (Dreamnity)",
-                    text: "Navigate the hidden side.",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "The submarine is now clearly visible. Label on submarine: DREAMNITY. It is navigating through all the underwater obstacles.\n\nTEXT:\nThe deeper you go in freelancing... the more important systems become.\nDreamnity helps freelancers navigate:\n✓ Global Payments\n✓ GST-Ready Invoicing\n✓ Merchant of Record Infrastructure\n✓ Clear Payout Tracking\nSo you're not left figuring it all out alone."
-                },
-                {
-                    time: "Slide 4",
-                    type: "The Power-Up (CTA)",
-                    text: "Upgrade your systems.",
-                    audio: "Visual Content Only (Carousel)",
-                    visual: "The submarine emerging confidently from the other side of the iceberg. Freelancer standing confidently.\n\nTEXT:\nMost freelancers upgrade their skills. The best freelancers upgrade their systems too.\n\nDREAMNITY\nNavigate the hidden side of freelancing. Accept payments globally. Stay GST-ready. Track every payout.\n\nLook like a business. Work like a freelancer."
-                }
-            ]
-        },
-        {
-            id: 13,
-            cycle: 2,
-            type: "reel",
-            title: "Reel 5: Expectation vs Reality",
-            target: "A classic, highly relatable format contrasting the dream of freelancing with the admin reality.",
-            vibe: "Humorous, relatable, problem/solution format.",
-            setup: "Fast cuts comparing the 'Instagram' version of freelancing to the 'Admin' version.",
-            blocks: [
-                {
-                    time: "0:00 - 0:05",
-                    type: "The Hook",
-                    text: "Expectation",
-                    audio: "Freelancing according to Instagram...",
-                    visual: "Actor smiling, typing casually."
-                },
-                {
-                    time: "0:05 - 0:18",
-                    type: "The Expectation",
-                    text: "Work from anywhere.",
-                    audio: "Work from anywhere. Be your own boss. Get clients. Do the work. Get paid.",
-                    visual: "Montage: Easy clients, Coffee shop, Luxury setup, Payment notification."
-                },
-                {
-                    time: "0:18 - 0:42",
-                    type: "The Reality",
-                    text: "Reality",
-                    audio: "Reality? One client asking for a GST invoice. Two payment follow-ups. Three different payment platforms. Four spreadsheets to track everything. And one international client asking for documents you've never heard of.",
-                    visual: "Montage: Stressed actor, Client asking for invoice, GST document screenshots, Payment follow-ups, Currency conversion, Spreadsheet tracking."
-                },
-                {
-                    time: "0:42 - 0:54",
-                    type: "Dreamnity Insert",
-                    text: "✓ Global Payments ✓ GST-Ready Invoices ✓ Payout Tracking",
-                    audio: "The work usually isn't the hardest part. Managing payments, invoices and everything around them is. That's exactly why we're building Dreamnity. Global payments, GST-ready invoicing and clear payout tracking — all in one place.",
-                    visual: "Clean transition to Dreamnity graphics."
-                },
-                {
-                    time: "0:54 - 1:00",
-                    type: "The CTA",
-                    text: "Save this ↓",
-                    audio: "If you're freelancing, save this for later.",
-                    visual: "Actor points downward."
-                }
-            ]
-        },
-        {
-            id: 14,
-            cycle: 2,
-            type: "reel",
-            title: "Reel 6: The Freelancer Iceberg (Reel Version)",
-            target: "Adapting the Carousel Iceberg concept into a cinematic Reel format.",
-            vibe: "Cinematic, metaphor-driven, revealing.",
-            setup: "Visuals of a massive cinematic iceberg and a submarine exploring underneath.",
-            blocks: [
-                {
-                    time: "0:00 - 0:08",
-                    type: "The Hook (Visual)",
-                    text: "What people think freelancing is.",
-                    audio: "If you think freelancing looks like this... Finding clients. Building a portfolio. Doing great work. Working from anywhere. Growing your income. ...then you might not have looked deep enough.",
-                    visual: "Top of a massive iceberg visible. A tiny freelancer standing on top. Actor pointing to elements."
-                },
-                {
-                    time: "0:08 - 0:18",
-                    type: "The Reveal",
-                    text: "The Freelancer Iceberg",
-                    audio: "Because that's only the tip of the iceberg.",
-                    visual: "Camera zooms out dramatically revealing the massive hidden 80% full iceberg underneath the water."
-                },
-                {
-                    time: "0:18 - 0:35",
-                    type: "The Hidden Side",
-                    text: "- Invoices - Payments - GST - Compliance",
-                    audio: "Below the surface is where things get complicated. Creating invoices. Managing payments. Handling GST requirements. Receiving money from international clients. Tracking payouts. And meeting the compliance requirements that larger companies expect.",
-                    visual: "Camera dives underwater, showing words floating like heavy anchors around the iceberg."
-                },
-                {
-                    time: "0:35 - 0:52",
-                    type: "The Submarine",
-                    text: "✓ Merchant of Record",
-                    audio: "That's exactly why Dreamnity exists. Dreamnity helps freelancers navigate the business side of freelancing by providing GST-compliant invoicing, global payment collection, clear payout tracking, and the infrastructure companies expect.",
-                    visual: "A sleek Dreamnity submarine appears underwater, navigating smoothly through all the floating obstacles."
-                },
-                {
-                    time: "0:52 - 1:00",
-                    type: "The Outro",
-                    text: "Focus on the work. We'll help with the rest.",
-                    audio: "So instead of spending your time figuring out paperwork and payment processes, you can focus on what you do best — delivering great work. Dreamnity.",
-                    visual: "Submarine emerges confidently. Dreamnity logo."
-                }
-            ]
-        }
+        // CYCLE 1
+        { id: 1, cycle: 1, type: 'reel', title: "Reel 1: Vendor Onboarding Trap", target: "Corporate AP Compliance", blocks: [{ time: "0:00", type: "Hook", audio: "If your corporate client loves your pitch but ghosts you during vendor onboarding, this is why.", visual: "B-roll of long corporate vendor forms." }] },
+        { id: 2, cycle: 1, type: 'reel', title: "Reel 2: Export Tax Myth", target: "GST/LUT Compliance", blocks: [{ time: "0:00", type: "Hook", audio: "Thinking you don't need to file GST for international work? That is a massive mistake.", visual: "Actor holding an export document." }] },
+        { id: 3, cycle: 1, type: 'reel', title: "Reel 3: Canva Invoice Fail", target: "Invoicing Standards", blocks: [{ time: "0:00", type: "Hook", audio: "Your Canva-designed PDF isn't a tax invoice, and that is why your payment is delayed.", visual: "Pretty invoice being crumpled up." }] },
+        { id: 4, cycle: 1, type: 'reel', title: "Reel 4: 18% Dead Cost", target: "ITC Understanding", blocks: [{ time: "0:00", type: "Hook", audio: "To charge premium rates, stop sending receipts and start sending GST invoices.", visual: "Split screen of receipt vs GST Invoice." }] },
+        { id: 5, cycle: 1, type: 'reel', title: "Reel 5: The Solo-Compliance Trap", target: "Business Structuring", blocks: [{ time: "0:00", type: "Hook", audio: "Stop registering for GST before you actually have to.", visual: "Actor counting compliance tasks." }] },
+        { id: 6, cycle: 1, type: 'reel', title: "Reel 6: The Infrastructure Fix", target: "Merchant of Record Reveal", blocks: [{ time: "0:00", type: "Hook", audio: "This is the legal bypass to bill big brands without the admin headache.", visual: "Dreamnity branding overlay." }] },
+        
+        // CYCLE 2
+        { id: 7, cycle: 2, type: 'reel', title: "Reel 1: 3 Websites Every Freelancer Needs", target: "Outreach & Pitching", blocks: [{ time: "0:00", type: "Hook", audio: "Freelancing in 2026 and not using these three sites? You're doing it the hard way.", visual: "Rapid fire screen recordings." }] },
+        { id: 8, cycle: 2, type: 'reel', title: "Reel 2: Why Clients Ghost You", target: "Client Communication", blocks: [{ time: "0:00", type: "Hook", audio: "If clients keep ghosting you, you're probably making these three basic mistakes.", visual: "Confused client vs professional freelancer comparison." }] },
+        { id: 9, cycle: 2, type: 'carousel', title: "Reel 3: The Freelancer Skill Tree", target: "Self-Analysis/Education", blocks: [{ time: "Slide 1", type: "Visual", audio: "Your build: Finding Clients - MAXED. Getting Paid - LOCKED.", visual: "RPG Skill tree interface." }] },
+        { id: 10, cycle: 2, type: 'reel', title: "Reel 4: Client Perspective", target: "Trust & Perception", blocks: [{ time: "0:00", type: "Hook", audio: "Would you hire yourself as a freelancer? Look at it through the client's eyes.", visual: "Actor in blazer, looking at a freelance proposal." }] },
+        { id: 11, cycle: 2, type: 'reel', title: "Reel 5: Freelancer vs Agency", target: "Brand Positioning", blocks: [{ time: "0:00", type: "Hook", audio: "Why do companies choose agencies when freelancers do the work for half the price?", visual: "Side-by-side comparison." }] },
+        { id: 12, cycle: 2, type: 'carousel', title: "Reel 6: The Freelancer Iceberg", target: "Metaphorical Value", blocks: [{ time: "Slide 1", type: "Visual", audio: "The freelance iceberg: What people see vs what actually keeps your business alive.", visual: "Cinematic iceberg illustration." }] }
     ];
 
-    document.addEventListener('DOMContentLoaded', () => {
-        renderNavigation();
-        selectReel(1); 
-    });
-
-    function switchCycle(cycleNum) {
-        currentCycle = cycleNum;
-        const btn1 = document.getElementById('btn-cycle-1');
-        const btn2 = document.getElementById('btn-cycle-2');
-        
-        if (cycleNum === 1) {
-            btn1.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md";
-            btn2.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all";
-        } else {
-            btn2.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md";
-            btn1.className = "flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all";
-        }
-
-        renderNavigation();
-        
-        // Auto-select first reel of the active cycle
-        const cycleReels = reelsData.filter(r => r.cycle === currentCycle);
-        if (cycleReels.length > 0) {
-            selectReel(cycleReels[0].id);
-        }
+    function switchCycle(cycle) {
+        currentCycle = cycle;
+        renderNav();
+        selectReel(reelsData.filter(r => r.cycle === cycle)[0].id);
     }
 
-    function renderNavigation() {
-        const navContainer = document.getElementById('reel-nav');
-        if (!navContainer) return;
-        navContainer.innerHTML = '';
-        
-        const filteredReels = reelsData.filter(r => r.cycle === currentCycle);
-        
-        filteredReels.forEach((reel, index) => {
+    function renderNav() {
+        const container = document.getElementById('reel-nav');
+        container.innerHTML = '';
+        reelsData.filter(r => r.cycle === currentCycle).forEach((r, i) => {
             const btn = document.createElement('button');
-            btn.id = `nav-btn-${reel.id}`;
-            btn.className = `reel-btn inactive w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent`;
-            btn.onclick = () => selectReel(reel.id);
-            
-            // Format type badge (Reel vs Carousel)
-            const typeText = reel.type === 'carousel' ? 'CAROUSEL' : '60S REEL';
-            const typeColor = reel.type === 'carousel' ? 'bg-fuchsia-950/80 text-fuchsia-400 border-fuchsia-900/40' : 'bg-indigo-950/80 text-indigo-400 border-indigo-900/40';
-
-            btn.innerHTML = `
-                <div class="flex items-center justify-between w-full mb-1">
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Asset 0${index + 1}</span>
-                    <span class="text-[9px] ${typeColor} border px-2 py-0.5 rounded font-bold">${typeText}</span>
-                </div>
-                <span class="font-heading font-bold text-base leading-tight mb-1 text-slate-100">${reel.title}</span>
-                <span class="text-xs text-slate-400 line-clamp-1">${reel.target}</span>
-            `;
-            navContainer.appendChild(btn);
+            btn.className = 'reel-btn inactive w-full text-left px-5 py-4 rounded-xl mb-2 flex flex-col';
+            btn.id = `btn-${r.id}`;
+            btn.innerHTML = `<span class="text-xs font-bold uppercase">${r.type} ${i+1}</span><span class="font-bold">${r.title}</span>`;
+            btn.onclick = () => selectReel(r.id);
+            container.appendChild(btn);
         });
     }
 
     function selectReel(id) {
-        reelsData.forEach(r => {
-            const btn = document.getElementById(`nav-btn-${r.id}`);
-            if (btn) {
-                if (r.id === id) {
-                    btn.className = "reel-btn active w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent";
-                } else {
-                    btn.className = "reel-btn inactive w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent hover:border-slate-800";
-                }
-            }
-        });
-
+        document.querySelectorAll('.reel-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(`btn-${id}`).classList.add('active');
         const reel = reelsData.find(r => r.id === id);
-        if (!reel) return;
-
-        const contentContainer = document.getElementById('script-content');
-        if (!contentContainer) return;
-        
-        let blocksHTML = '';
-        reel.blocks.forEach(block => {
-            let textOverlayHTML = block.text ? `<div class="mb-3"><span class="badge bg-slate-900 text-indigo-300 border border-slate-800 mr-2 font-heading">On-Screen Text</span> <span class="font-semibold text-slate-200">"${block.text}"</span></div>` : '';
-            let visualHTML = block.visual ? `<div class="mb-3"><span class="badge bg-slate-900 text-cyan-400 border border-slate-800 mr-2 font-heading">Visual Cue</span> <span class="text-xs text-slate-400 font-mono">${block.visual}</span></div>` : '';
-            
-            blocksHTML += `
-                <div class="mb-10 relative pl-8">
-                    <div class="absolute left-0 top-2 bottom-[-2.5rem] w-0.5 bg-slate-800"></div>
-                    <div class="absolute left-[-5px] top-2.5 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-slate-950"></div>
-
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-indigo-950/80 text-indigo-400 border border-indigo-900/40 text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-sm">${block.time}</span>
-                        <span class="font-heading font-extrabold text-slate-100 text-lg">${block.type}</span>
-                    </div>
-                    
-                    ${textOverlayHTML}
-                    ${visualHTML}
-                    
-                    <div class="mt-4 bg-slate-900/30 p-5 rounded-2xl border border-slate-800/80 relative">
-                        <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-wider">Content Script / Dialogue</span>
-                        <p class="text-slate-200 font-medium text-[15px] leading-relaxed">
-                            "${block.audio}"
-                        </p>
-                    </div>
-                </div>
-            `;
-        });
-
-        const typeLabel = reel.type === 'carousel' ? 'Instagram Carousel' : 'Viral 60s Reel';
-
-        contentContainer.innerHTML = `
-            <div class="script-block" id="block-${reel.id}">
-                <div class="border-b border-slate-800 pb-6 mb-8 relative">
-                    <div class="flex items-center gap-3 mb-3">
-                        <h2 class="text-3xl font-extrabold font-heading text-white">${reel.title}</h2>
-                    </div>
-                    <div class="inline-flex items-center bg-slate-900/50 text-slate-400 px-3 py-1.5 rounded-xl text-xs mb-6 border border-slate-800">
-                        <span class="font-bold mr-2 text-indigo-400">Strategy:</span> ${reel.target}
-                    </div>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-2 border-t border-slate-900 pt-6">
-                        <div>
-                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Tone & Vibe</h4>
-                            <p class="text-xs text-slate-300 font-medium leading-relaxed">${reel.vibe}</p>
-                        </div>
-                        <div>
-                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Setup / Format</h4>
-                            <p class="text-xs text-slate-300 font-medium leading-relaxed">${reel.setup}</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <h3 class="text-xl font-bold font-heading text-white mb-8">
-                    Production Blueprint (${typeLabel})
-                </h3>
-                <div class="script-timeline ml-2">
-                    ${blocksHTML}
-                </div>
-            </div>
-        `;
+        const content = document.getElementById('script-content');
+        content.innerHTML = `<h2 class="text-3xl font-black mb-4">${reel.title}</h2><p class="text-indigo-400 mb-6">${reel.target}</p><div class="space-y-4 text-slate-300">
+            ${reel.blocks.map(b => `<div class="p-4 bg-slate-900 rounded-lg"><strong>${b.type}:</strong> ${b.audio}</div>`).join('')}
+        </div>`;
     }
-</script>
 
+    renderNav();
+    selectReel(1);
+</script>
 </body>
 </html>
