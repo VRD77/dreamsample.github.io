@@ -2,83 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamnity | Organic Virality Hub</title>
+    <title>Dreamnity Content Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #030712; color: #f3f4f6; }
-        h1, h2, h3, h4, h5, .font-heading { font-family: 'Outfit', sans-serif; }
-        .text-gradient { background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .reel-btn.active { background-color: #111827; border-left: 4px solid #6366f1; color: #ffffff; }
-        .reel-btn.inactive { background-color: transparent; border-left: 4px solid transparent; color: #9ca3af; }
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #374151; border-radius: 10px; }
-        .badge { display: inline-flex; align-items: center; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-    </style>
 </head>
-<body class="antialiased pb-24">
+<body class="bg-slate-950 text-slate-200 p-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-white">Dreamnity Content Hub</h1>
+        
+        <div class="grid grid-cols-4 gap-8">
+            <div class="col-span-1 space-y-6">
+                <div id="nav-container"></div>
+            </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-    <header class="mb-12 border-b border-slate-900 pb-10 text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white">
-            Dreamnity <span class="text-gradient">Content Engine</span>
-        </h1>
-        <p class="text-slate-400">Integrated Cycle 2 Reels & Carousel Assets.</p>
-    </header>
-
-    <div class="flex bg-slate-950 p-1.5 rounded-2xl border border-slate-900 max-w-lg mb-8">
-        <button onclick="renderAssets(1)" class="flex-1 py-3 px-5 rounded-xl font-bold text-sm bg-indigo-600 text-white">Cycle 1: B2B Foundations</button>
-        <button onclick="renderAssets(2)" class="flex-1 py-3 px-5 rounded-xl font-bold text-sm text-slate-400">Cycle 2: Advanced Scaling</button>
+            <div class="col-span-3 bg-slate-900 p-8 rounded-2xl border border-slate-800" id="display-area">
+                <p class="text-slate-400">Select an asset from the left to view the script/structure.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-1 max-h-[680px] overflow-y-auto custom-scrollbar pr-2" id="asset-nav"></div>
-        <div class="lg:col-span-2 bg-slate-950 rounded-3xl border border-slate-900 p-6 md:p-10 min-h-[600px]" id="asset-content"></div>
-    </div>
-</div>
+    <script>
+        const content = {
+            cycle2: {
+                reels: [
+                    { id: 1, title: "3 Mistakes That Make Clients Ghost", content: "Hook: If clients keep disappearing... Mistakes: Vague messaging, Slow responses, Unprofessionalism. Dreamnity mentioned as solution[cite: 7, 8, 9, 10, 11, 12, 13]." },
+                    { id: 2, title: "Client Perspective", content: "Focuses on why businesses hire based on process rather than talent. Dreamnity introduced as the structure[cite: 16, 17, 18, 19, 20, 21, 22]." },
+                    { id: 3, title: "Expectation vs Reality", content: "Contrast between Instagram 'easy' freelancing vs reality of invoices/GST. Dreamnity mentioned as solution[cite: 30, 31, 32, 33, 34]." },
+                    { id: 4, title: "Why Companies Prefer Agencies", content: "Companies choose agencies for structure/compliance. Dreamnity helps freelancers look like businesses[cite: 23, 24, 25, 26, 27, 28, 29]." },
+                    { id: 5, title: "The Freelancer Iceberg", content: "Visible: Clients/Income. Hidden: Invoices/GST/Compliance. Dreamnity is the submarine[cite: 35, 36, 37, 38, 39, 40, 41]." }
+                ],
+                carousels: [
+                    { id: 1, title: "Freelancer Skill Tree", content: "Page 1: Skill Tree. Page 2: Client Acquisition. Page 3: Getting Paid Nightmare. Page 4: Dreamnity Unlock[cite: 14, 15]." },
+                    { id: 2, title: "The Freelancer Iceberg Carousel", content: "Visual of iceberg (20% visible). Submarine 'Dreamnity' navigates hidden side (GST/Compliance/Payments)[cite: 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]." }
+                ]
+            }
+        };
 
-<script>
-    const assets = [
-        // --- CYCLE 2 REELS (Updated with files) ---
-        { id: 7, cycle: 2, type: 'Reel', title: '3 Mistakes That Make Clients Ghost Freelancers', content: [
-            { time: '0:00-0:05', audio: 'If clients keep disappearing after showing interest… you might be making one of these mistakes without realizing it.' },
-            { time: '0:05-0:20', audio: 'Vague messaging: stop listing services like "editing, design, marketing". Explain the specific result: "I help gyms create videos that increase leads."' },
-            { time: '0:20-0:34', audio: 'Slow responses: replying 8 hours later loses clients. Keep conversations alive with quick updates.' },
-            { time: '0:34-0:52', audio: 'Unprofessionalism: not having GST invoices or payment workflows kills trust. Dreamnity simplifies this.' }
-        ]},
-        { id: 8, cycle: 2, type: 'Reel', title: 'Client Perspective: Why Talent Isn\'t Enough', content: [
-            { time: '0:00-0:08', audio: 'Imagine you hire a talented freelancer. Portfolio is great. Price works. Everything seems perfect.' },
-            { time: '0:08-0:25', audio: 'But finance asks: "Can they provide proper invoices? How do we process payments?" Suddenly, hiring feels risky.' },
-            { time: '0:35-0:52', audio: 'Dreamnity allows freelancers to offer GST-ready invoicing and compliant billing, so businesses get the structure they expect.' }
-        ]},
-        // --- CYCLE 2 CAROUSELS (Updated with files) ---
-        { id: 101, cycle: 2, type: 'Carousel', title: 'The Freelancer Iceberg', content: [
-            { slide: '1', text: 'What people see vs what runs your business. Finding clients (20% visible) vs. The hidden 80%: Tax, Invoices, Compliance.' },
-            { slide: '2', text: 'The part nobody talks about: Chasing payments, international transfers, and GST questions.' },
-            { slide: '3', text: 'Dreamnity acts as the submarine navigating the hidden obstacles: GST-ready invoicing, global payments, and payout tracking.' },
-            { slide: '4', text: 'Most freelancers upgrade skills. The best upgrade their systems. Look like a business, work like a freelancer.' }
-        ]}
-    ];
+        function renderNav() {
+            const container = document.getElementById('nav-container');
+            container.innerHTML = `
+                <h3 class="font-bold text-white mb-2">Reels</h3>
+                ${content.cycle2.reels.map(r => `<button onclick="show('reel', ${r.id})" class="block text-indigo-400 hover:text-white">Reel ${r.id}: ${r.title}</button>`).join('')}
+                <h3 class="font-bold text-white mt-6 mb-2">Carousels</h3>
+                ${content.cycle2.carousels.map(c => `<button onclick="show('carousel', ${c.id})" class="block text-emerald-400 hover:text-white">Carousel ${c.id}: ${c.title}</button>`).join('')}
+            `;
+        }
 
-    function renderAssets(cycle) {
-        const nav = document.getElementById('asset-nav');
-        nav.innerHTML = assets.filter(a => a.cycle === cycle).map(a => `
-            <button onclick="showAsset(${a.id})" class="w-full text-left p-4 rounded-2xl mb-2 bg-slate-900 border border-slate-800 hover:border-indigo-500">
-                <span class="text-[10px] font-bold text-indigo-400">${a.type.toUpperCase()}</span>
-                <div class="font-bold">${a.title}</div>
-            </button>
-        `).join('');
-    }
+        function show(type, id) {
+            const item = content.cycle2[type + 's'].find(i => i.id === id);
+            document.getElementById('display-area').innerHTML = `<h2 class="text-xl font-bold mb-4">${type.toUpperCase()} ${id}: ${item.title}</h2><p>${item.content}</p>`;
+        }
 
-    function showAsset(id) {
-        const asset = assets.find(a => a.id === id);
-        const content = document.getElementById('asset-content');
-        content.innerHTML = `<h2 class="text-2xl font-bold mb-6">${asset.title}</h2>` + 
-            asset.content.map(c => `<div class="mb-4 p-4 bg-slate-900 rounded-xl">${c.time || 'Slide ' + c.slide}: ${c.audio || c.text}</div>`).join('');
-    }
-
-    renderAssets(2);
-</script>
+        renderNav();
+    </script>
 </body>
 </html>
