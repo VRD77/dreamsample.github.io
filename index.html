@@ -3,59 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dreamnity | Organic Virality Hub</title>
+<title>Dreamnity | Audience Building Pre-Production</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
     body {
         font-family: 'Inter', sans-serif;
-        background-color: #030712;
-        color: #f3f4f6;
+        background-color: #f8fafc;
+        color: #0f172a;
     }
-    h1, h2, h3, h4, h5, .font-heading {
+    h1, h2, h3, h4, h5,.font-heading {
         font-family: 'Outfit', sans-serif;
     }
-    .text-gradient {
-        background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+   .text-gradient {
+        background: linear-gradient(to right, #0284c7, #4f46e5);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    .reel-btn {
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+   .reel-btn {
+        transition: all 0.2s ease-in-out;
     }
-    .reel-btn.active {
-        background-color: #111827;
-        border-left: 4px solid #6366f1;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-        color: #ffffff;
+   .reel-btn.active {
+        background-color: #ffffff;
+        border-left: 4px solid #4f46e5;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        color: #312e81;
     }
-    .reel-btn.inactive {
+   .reel-btn.inactive {
         background-color: transparent;
         border-left: 4px solid transparent;
-        color: #9ca3af;
+        color: #475569;
     }
-    .reel-btn.inactive:hover {
-        background-color: #0f172a;
-        color: #f3f4f6;
+   .reel-btn.inactive:hover {
+        background-color: #f1f5f9;
+        color: #0f172a;
     }
-    .script-block {
-        animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+   .script-block {
+        animation: fadeIn 0.4s ease-out;
     }
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(12px); }
+        from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
     }
-    .custom-scrollbar::-webkit-scrollbar {
+   .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
     }
-    .custom-scrollbar::-webkit-scrollbar-track {
+   .custom-scrollbar::-webkit-scrollbar-track {
         background: transparent;
     }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: #374151;
+   .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
         border-radius: 10px;
     }
-    .badge {
+   .badge {
         display: inline-flex;
         align-items: center;
         padding: 0.25rem 0.75rem;
@@ -67,53 +67,51 @@
     }
 </style>
 </head>
-<body class="antialiased pb-24 selection:bg-indigo-900 selection:text-indigo-200">
+<body class="antialiased pb-24 selection:bg-indigo-100 selection:text-indigo-900">
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
     
-    <header class="mb-12 border-b border-slate-900 pb-10 text-center md:text-left relative flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div>
-            <div class="badge bg-indigo-950/50 text-indigo-400 border border-indigo-900/50 mb-4 font-heading tracking-widest">
-                THE SOLO-BUSINESS BLUEPRINT
-            </div>
-            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white">
-                Dreamnity <span class="text-gradient">Organic Assets</span>
-            </h1>
-            <p class="text-base text-slate-400 max-w-2xl leading-relaxed">
-                A hyper-curated set of standalone organic scripts. Cycle 1 establishes B2B compliance foundations. Cycle 2 leverages highly engaging, trend-based formats (Top 3 lists, Skill Trees, Iceberg metaphors) to effortlessly integrate Dreamnity into the modern freelancer's toolkit.
-            </p>
+    <header class="mb-12 border-b border-slate-200 pb-8 text-center md:text-left relative">
+        <div class="badge bg-slate-100 text-slate-700 border border-slate-200 mb-4">
+            Phase 1: Pre-Launch Audience Building
         </div>
-        <div class="flex items-center gap-3 bg-slate-900/40 border border-slate-800/80 px-5 py-3 rounded-2xl">
-            <div class="w-3.5 h-3.5 rounded-full bg-emerald-500 animate-pulse"></div>
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Phase 1 Acquisition Ready</span>
-        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-slate-900">
+            <span class="text-gradient">Dreamnity</span> Content Strategy
+        </h1>
+        <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+            A successful product launch is not a single event; it is a culmination of storytelling that makes people want your product before they can even buy it. Since the core platform is currently in development, these scripts are engineered strictly for organic audience capture. We utilize educational value regarding strict tax compliance and industry transparency to build authority and deep curiosity before the July launch.
+        </p>
     </header>
 
-    <!-- TIMELINE/CYCLE CONTROLLER -->
-    <div class="flex bg-slate-950 p-1.5 rounded-2xl border border-slate-900 max-w-lg mb-8">
-        <button onclick="switchCycle(1)" id="btn-cycle-1" class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm bg-indigo-600 text-white transition-all shadow-md">
-            Cycle 1: B2B Foundations
-        </button>
-        <button onclick="switchCycle(2)" id="btn-cycle-2" class="flex-1 py-3 px-5 rounded-xl font-heading font-bold text-sm text-slate-400 hover:text-slate-200 transition-all">
-            Cycle 2: Advanced Scaling
-        </button>
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-10">
+        <h2 class="text-2xl font-bold font-heading text-slate-800 mb-4">
+            Strategic Content Pillars
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+        <div>
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Campaign Timeline</span>
+            <h3 class="text-lg font-bold font-heading text-slate-800">Select Production Cycle</h3>
+        </div>
+        <div class="flex bg-slate-100 p-1.5 rounded-xl w-full md:w-auto min-w-[320px]">
+            <button onclick="switchCycle(1)" id="btn-cycle-1" class="cycle-tab flex-1 py-2.5 px-6 text-center rounded-lg font-heading font-bold text-sm bg-white text-indigo-950 shadow-sm">
+                Cycle 1: B2B Foundations
+            </button>
+            <button onclick="switchCycle(2)" id="btn-cycle-2" class="cycle-tab flex-1 py-2.5 px-6 text-center rounded-lg font-heading font-bold text-sm text-slate-600 hover:text-slate-900">
+                Cycle 2: Trend & Acquisition
+            </button>
+        </div>
     </div>
 
-    <!-- MAIN CREATIVE INTERFACE -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
         
-        <!-- SIDEBAR SELECTOR (COLUMN 1) -->
-        <div class="lg:col-span-1 flex flex-col gap-3 max-h-[680px] overflow-y-auto custom-scrollbar pr-2" id="reel-nav">
-            <!-- Navigation items programmatically generated here -->
-        </div>
+        <div class="w-full md:w-1/3 flex flex-col gap-2 sticky top-6 custom-scrollbar max-h-[80vh] overflow-y-auto" id="reel-nav">
+            </div>
 
-        <!-- MAIN SCREENPLAY READER (COLUMN 2 & 3) -->
-        <div class="lg:col-span-2 bg-slate-950 rounded-3xl shadow-2xl border border-slate-900 p-6 md:p-10 min-h-[600px] relative overflow-hidden flex flex-col justify-between" id="script-content">
-            <!-- Active script content populated here -->
-        </div>
+        <div class="w-full md:w-2/3 bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-10 min-h-[600px] relative overflow-hidden" id="script-content">
+             </div>
 
     </div>
-
 </div>
 
 <script>
@@ -354,7 +352,8 @@
         {
             id: 7,
             cycle: 2,
-            title: "Reel 7: 3 Websites Every Freelancer Must Know",
+            type: "reel",
+            title: "Reel 1: 3 Websites Every Freelancer Must Know",
             target: "Top-of-funnel value offering tools, seamlessly inserting Dreamnity into the tech stack.",
             vibe: "Helpful, fast-paced, tech-savvy. High save & share value.",
             setup: "Graphical images with SFX followed by the speaker surrounded by the floating logos of the tools.",
@@ -399,7 +398,8 @@
         {
             id: 8,
             cycle: 2,
-            title: "Reel 8: Why Clients Ghost You",
+            type: "reel",
+            title: "Reel 2: Why Clients Ghost You",
             target: "Actionable advice highlighting the need for professional business infrastructure.",
             vibe: "Direct, educational, problem-solving.",
             setup: "Fast cuts. Message notifications fading. Seen ticks. Empty inbox visuals.",
@@ -444,52 +444,47 @@
         {
             id: 9,
             cycle: 2,
-            title: "Reel 9: The Freelancer Skill Tree",
+            type: "carousel",
+            title: "Carousel 1: The Freelancer Skill Tree",
             target: "A gamified visual concept comparing creative skills to business infrastructure.",
             vibe: "Gamified, engaging, structured like a video game stat screen.",
-            setup: "On-screen UI mimicking an RPG skill tree. Voiceover explaining the stats as they light up.",
+            setup: "A 4-page swipeable Instagram Carousel graphic.",
             blocks: [
                 {
-                    time: "0:00 - 0:10",
-                    type: "The Hook (UI Graphic)",
+                    time: "Slide 1",
+                    type: "The Hook (Cover Image)",
                     text: "FREELANCER SKILL TREE",
-                    audio: "Let's check your Freelancer Skill Tree build. Finding Clients? MAXED OUT. Getting Paid? Still Locked.",
-                    visual: "Visual of a video game skill tree. Acquisition glows bright, Finance section is grayed out with a padlock."
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "Your build: \n- Finding Clients — MAXED OUT\n- Getting Paid — Still Locked\nSwipe to see your stats →"
                 },
                 {
-                    time: "0:10 - 0:25",
-                    type: "The Acqusition Stats",
-                    text: "Difficulty: Easy",
-                    audio: "Under Client Acquisition, you are five stars. You know exactly how to cold email, network, pitch, and find opportunities. Your skill level here is insane.",
-                    visual: "Checkmarks appear next to: ✓ Cold email ✓ Network ✓ Pitch ✓ Find opportunities."
+                    time: "Slide 2",
+                    type: "The Acquisition Stats",
+                    text: "CLIENT ACQUISITION ⭐⭐⭐⭐⭐",
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "You know how to:\n✓ Cold email\n✓ Network\n✓ Pitch\n✓ Find opportunities\n\nDifficulty: Easy"
                 },
                 {
-                    time: "0:25 - 0:40",
+                    time: "Slide 3",
                     type: "The Business Stats",
-                    text: "Difficulty: Nightmare Mode",
-                    audio: "But let's look at Getting Paid. One star. Current skills? GST, Invoicing, Payment tracking, Compliance, International payments... all red 'X's. Right now, your business mode is stuck on Nightmare Difficulty.",
-                    visual: "Red 'X' marks appear violently next to the compliance and invoicing skills."
+                    text: "GETTING PAID ⭐☆☆☆☆",
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "Current skills:\n✗ GST\n✗ Invoicing\n✗ Payment tracking\n✗ Compliance\n✗ International payments\n\nDifficulty: Nightmare Mode"
                 },
                 {
-                    time: "0:40 - 0:50",
-                    type: "The Power-Up",
+                    time: "Slide 4",
+                    type: "The Power-Up (CTA)",
                     text: "NEW SKILL UNLOCKED: DREAMNITY",
-                    audio: "It's time to unlock a new skill: Dreamnity. Instantly equip GST-Ready Invoicing, Global Payment Collection, Merchant of Record Infrastructure, and Corporate-Ready Billing.",
-                    visual: "A glowing treasure chest opens, unlocking all the grayed-out skills instantly."
-                },
-                {
-                    time: "0:50 - 1:00",
-                    type: "The CTA",
-                    text: "Level up the business side of freelancing.",
-                    audio: "Every freelancer upgrades their skills. Very few upgrade their systems. Level up the business side of freelancing with Dreamnity.",
-                    visual: "Dreamnity Logo animation."
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "* GST-Ready Invoicing\n* Global Payment Collection\n* Merchant of Record Infrastructure\n* Clear Payout Tracking\n* Corporate-Ready Billing\n* Compliance Built In\n\nEvery freelancer upgrades their skills. Very few upgrade their systems. Level up the business side of freelancing.\n[Dreamnity Logo]"
                 }
             ]
         },
         {
             id: 10,
             cycle: 2,
-            title: "Reel 10: The Client's Perspective",
+            type: "reel",
+            title: "Reel 3: The Client's Perspective",
             target: "Flipping the script to show what B2B clients actually care about.",
             vibe: "Empathetic to the client, eye-opening for the freelancer.",
             setup: "B-roll heavy, professional tone. Putting the viewer in the shoes of the person paying them.",
@@ -534,7 +529,8 @@
         {
             id: 11,
             cycle: 2,
-            title: "Reel 11: Freelancer vs. Agency (Expectations)",
+            type: "reel",
+            title: "Reel 4: Freelancer vs. Agency (Expectations)",
             target: "Debunking the skill gap and highlighting the infrastructure gap.",
             vibe: "Truth bomb, strategic, professional.",
             setup: "Actor looking directly at camera, confident delivery.",
@@ -572,8 +568,94 @@
         {
             id: 12,
             cycle: 2,
-            title: "Reel 12: The Freelancer Iceberg",
+            type: "carousel",
+            title: "Carousel 2: The Freelancer Iceberg",
             target: "A powerful visual metaphor for the unseen administrative burden of freelancing.",
+            vibe: "Cinematic, metaphor-driven, revealing.",
+            setup: "A 4-page swipeable Instagram Carousel graphic. Metaphor format.",
+            blocks: [
+                {
+                    time: "Slide 1",
+                    type: "The Hook (Cover Image)",
+                    text: "THE FREELANCER ICEBERG",
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "A massive cinematic iceberg. Only 20% visible above water. 80% hidden below. A tiny freelancer standing on top. A mysterious submarine silhouette visible underwater.\n\nTEXT:\nWhat everyone sees.\nWhat nobody talks about.\nSwipe to dive deeper →"
+                },
+                {
+                    time: "Slide 2",
+                    type: "The Visible & Invisible",
+                    text: "ABOVE WATER vs BELOW WATER",
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "Zoom into the iceberg.\n\nABOVE WATER (The part everyone posts on LinkedIn):\n- Finding Clients\n- Building a Portfolio\n- Delivering Great Work\n- Growing Your Income\n- Working From Anywhere\n\nBELOW WATER (The part nobody tells you about):\n- Chasing Payments\n- GST & Tax Questions\n- International Transfers\n- Invoice Management\n- Corporate Requirements\n- Compliance & Documentation"
+                },
+                {
+                    time: "Slide 3",
+                    type: "The Submarine (Dreamnity)",
+                    text: "Navigate the hidden side.",
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "The submarine is now clearly visible. Label on submarine: DREAMNITY. It is navigating through all the underwater obstacles.\n\nTEXT:\nThe deeper you go in freelancing... the more important systems become.\nDreamnity helps freelancers navigate:\n✓ Global Payments\n✓ GST-Ready Invoicing\n✓ Merchant of Record Infrastructure\n✓ Clear Payout Tracking\nSo you're not left figuring it all out alone."
+                },
+                {
+                    time: "Slide 4",
+                    type: "The Power-Up (CTA)",
+                    text: "Upgrade your systems.",
+                    audio: "Visual Content Only (Carousel)",
+                    visual: "The submarine emerging confidently from the other side of the iceberg. Freelancer standing confidently.\n\nTEXT:\nMost freelancers upgrade their skills. The best freelancers upgrade their systems too.\n\nDREAMNITY\nNavigate the hidden side of freelancing. Accept payments globally. Stay GST-ready. Track every payout.\n\nLook like a business. Work like a freelancer."
+                }
+            ]
+        },
+        {
+            id: 13,
+            cycle: 2,
+            type: "reel",
+            title: "Reel 5: Expectation vs Reality",
+            target: "A classic, highly relatable format contrasting the dream of freelancing with the admin reality.",
+            vibe: "Humorous, relatable, problem/solution format.",
+            setup: "Fast cuts comparing the 'Instagram' version of freelancing to the 'Admin' version.",
+            blocks: [
+                {
+                    time: "0:00 - 0:05",
+                    type: "The Hook",
+                    text: "Expectation",
+                    audio: "Freelancing according to Instagram...",
+                    visual: "Actor smiling, typing casually."
+                },
+                {
+                    time: "0:05 - 0:18",
+                    type: "The Expectation",
+                    text: "Work from anywhere.",
+                    audio: "Work from anywhere. Be your own boss. Get clients. Do the work. Get paid.",
+                    visual: "Montage: Easy clients, Coffee shop, Luxury setup, Payment notification."
+                },
+                {
+                    time: "0:18 - 0:42",
+                    type: "The Reality",
+                    text: "Reality",
+                    audio: "Reality? One client asking for a GST invoice. Two payment follow-ups. Three different payment platforms. Four spreadsheets to track everything. And one international client asking for documents you've never heard of.",
+                    visual: "Montage: Stressed actor, Client asking for invoice, GST document screenshots, Payment follow-ups, Currency conversion, Spreadsheet tracking."
+                },
+                {
+                    time: "0:42 - 0:54",
+                    type: "Dreamnity Insert",
+                    text: "✓ Global Payments ✓ GST-Ready Invoices ✓ Payout Tracking",
+                    audio: "The work usually isn't the hardest part. Managing payments, invoices and everything around them is. That's exactly why we're building Dreamnity. Global payments, GST-ready invoicing and clear payout tracking — all in one place.",
+                    visual: "Clean transition to Dreamnity graphics."
+                },
+                {
+                    time: "0:54 - 1:00",
+                    type: "The CTA",
+                    text: "Save this ↓",
+                    audio: "If you're freelancing, save this for later.",
+                    visual: "Actor points downward."
+                }
+            ]
+        },
+        {
+            id: 14,
+            cycle: 2,
+            type: "reel",
+            title: "Reel 6: The Freelancer Iceberg (Reel Version)",
+            target: "Adapting the Carousel Iceberg concept into a cinematic Reel format.",
             vibe: "Cinematic, metaphor-driven, revealing.",
             setup: "Visuals of a massive cinematic iceberg and a submarine exploring underneath.",
             blocks: [
@@ -582,7 +664,7 @@
                     type: "The Hook (Visual)",
                     text: "What people think freelancing is.",
                     audio: "If you think freelancing looks like this... Finding clients. Building a portfolio. Doing great work. Working from anywhere. Growing your income. ...then you might not have looked deep enough.",
-                    visual: "Top of a massive iceberg visible. A tiny freelancer standing on top."
+                    visual: "Top of a massive iceberg visible. A tiny freelancer standing on top. Actor pointing to elements."
                 },
                 {
                     time: "0:08 - 0:18",
@@ -655,10 +737,15 @@
             btn.id = `nav-btn-${reel.id}`;
             btn.className = `reel-btn inactive w-full text-left px-5 py-4 rounded-2xl mb-2 flex flex-col border border-transparent`;
             btn.onclick = () => selectReel(reel.id);
+            
+            // Format type badge (Reel vs Carousel)
+            const typeText = reel.type === 'carousel' ? 'CAROUSEL' : '60S REEL';
+            const typeColor = reel.type === 'carousel' ? 'bg-fuchsia-950/80 text-fuchsia-400 border-fuchsia-900/40' : 'bg-indigo-950/80 text-indigo-400 border-indigo-900/40';
+
             btn.innerHTML = `
                 <div class="flex items-center justify-between w-full mb-1">
                     <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Asset 0${index + 1}</span>
-                    <span class="text-[9px] bg-indigo-950/80 text-indigo-400 border border-indigo-900/40 px-2 py-0.5 rounded font-bold">60S MAX</span>
+                    <span class="text-[9px] ${typeColor} border px-2 py-0.5 rounded font-bold">${typeText}</span>
                 </div>
                 <span class="font-heading font-bold text-base leading-tight mb-1 text-slate-100">${reel.title}</span>
                 <span class="text-xs text-slate-400 line-clamp-1">${reel.target}</span>
@@ -687,8 +774,8 @@
         
         let blocksHTML = '';
         reel.blocks.forEach(block => {
-            let textOverlayHTML = block.text ? `<div class="mb-3"><span class="badge bg-slate-900 text-indigo-300 border border-slate-800 mr-2 font-heading">On-Screen Graphic</span> <span class="font-semibold text-slate-200">"${block.text}"</span></div>` : '';
-            let visualHTML = block.visual ? `<div class="mb-3"><span class="badge bg-slate-900 text-cyan-400 border border-slate-800 mr-2 font-heading">Aesthetic direction</span> <span class="text-xs text-slate-400 font-mono">${block.visual}</span></div>` : '';
+            let textOverlayHTML = block.text ? `<div class="mb-3"><span class="badge bg-slate-900 text-indigo-300 border border-slate-800 mr-2 font-heading">On-Screen Text</span> <span class="font-semibold text-slate-200">"${block.text}"</span></div>` : '';
+            let visualHTML = block.visual ? `<div class="mb-3"><span class="badge bg-slate-900 text-cyan-400 border border-slate-800 mr-2 font-heading">Visual Cue</span> <span class="text-xs text-slate-400 font-mono">${block.visual}</span></div>` : '';
             
             blocksHTML += `
                 <div class="mb-10 relative pl-8">
@@ -704,7 +791,7 @@
                     ${visualHTML}
                     
                     <div class="mt-4 bg-slate-900/30 p-5 rounded-2xl border border-slate-800/80 relative">
-                        <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-wider">DIALOGUE SCRIPT (Viral Target)</span>
+                        <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-wider">Content Script / Dialogue</span>
                         <p class="text-slate-200 font-medium text-[15px] leading-relaxed">
                             "${block.audio}"
                         </p>
@@ -713,28 +800,32 @@
             `;
         });
 
+        const typeLabel = reel.type === 'carousel' ? 'Instagram Carousel' : 'Viral 60s Reel';
+
         contentContainer.innerHTML = `
             <div class="script-block" id="block-${reel.id}">
                 <div class="border-b border-slate-800 pb-6 mb-8 relative">
-                    <h2 class="text-3xl font-extrabold font-heading text-white mb-3 pr-20">${reel.title}</h2>
+                    <div class="flex items-center gap-3 mb-3">
+                        <h2 class="text-3xl font-extrabold font-heading text-white">${reel.title}</h2>
+                    </div>
                     <div class="inline-flex items-center bg-slate-900/50 text-slate-400 px-3 py-1.5 rounded-xl text-xs mb-6 border border-slate-800">
-                        <span class="font-bold mr-2 text-indigo-400">Viral Strategy:</span> ${reel.target}
+                        <span class="font-bold mr-2 text-indigo-400">Strategy:</span> ${reel.target}
                     </div>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-2 border-t border-slate-900 pt-6">
                         <div>
-                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Speaker Tone & Delivery</h4>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Tone & Vibe</h4>
                             <p class="text-xs text-slate-300 font-medium leading-relaxed">${reel.vibe}</p>
                         </div>
                         <div>
-                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Aesthetic Environment</h4>
+                            <h4 class="text-[10px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Setup / Format</h4>
                             <p class="text-xs text-slate-300 font-medium leading-relaxed">${reel.setup}</p>
                         </div>
                     </div>
                 </div>
                 
                 <h3 class="text-xl font-bold font-heading text-white mb-8">
-                    Production Timeline Blueprint
+                    Production Blueprint (${typeLabel})
                 </h3>
                 <div class="script-timeline ml-2">
                     ${blocksHTML}
